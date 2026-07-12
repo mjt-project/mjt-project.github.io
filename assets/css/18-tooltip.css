@@ -1,0 +1,176 @@
+/*
+==========================================
+MJT Project Design System
+Tooltip
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Wrapper
+====================================== */
+.tooltip {
+    position: relative;
+    display: inline - flex;
+    align - items: center;
+}
+/* ======================================
+Content
+====================================== */
+.tooltip - content {
+        position: absolute;
+        left: 50 % ;
+        bottom: calc(100 % +14 px);
+        transform: translateX(-50 % )
+        translateY(8 px)
+        scale(.96);
+        min - width: 140 px;
+        max - width: 320 px;
+        padding: 12 px 16 px;
+        border - radius: 14 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(15, 23, 42, .96);
+        backdrop - filter: blur(18 px);
+        color: var (--text - primary);
+        font - size: .82 rem;
+        line - height: 1.6;
+        text - align: center;
+        box - shadow: var (--shadow - lg);
+        opacity: 0;
+        visibility: hidden;
+        pointer - events: none;
+        transition: opacity
+        var (--transition),
+        transform
+        var (--transition),
+        visibility
+        var (--transition);
+        z - index: 1000;
+    }
+    /* ======================================
+    Arrow
+    ====================================== */
+    .tooltip - content::after {
+        content: "";
+        position: absolute;
+        left: 50 % ;
+        top: 100 % ;
+        width: 12 px;
+        height: 12 px;
+        transform: translateX(-50 % )
+        rotate(45 deg);
+        background: rgba(15, 23, 42, .96);
+        border - right: 1 px solid
+        var (--border - color);
+        border - bottom: 1 px solid
+        var (--border - color);
+    }
+    /* ======================================
+    Hover
+    ====================================== */
+    .tooltip: hover.tooltip - content,
+    .tooltip: focus - within.tooltip - content {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50 % )
+        translateY(0)
+        scale(1);
+    }
+    /* ======================================
+    Top
+    ====================================== */
+    .tooltip - top.tooltip - content {
+        bottom: calc(100 % +14 px);
+        top: auto;
+    }
+    /* ======================================
+    Bottom
+    ====================================== */
+    .tooltip - bottom.tooltip - content {
+        top: calc(100 % +14 px);
+        bottom: auto;
+    }
+    .tooltip - bottom.tooltip - content::after {
+        top: auto;
+        bottom: 100 % ;
+        transform: translateX(-50 % )
+        rotate(225 deg);
+    }
+    /* ======================================
+    Left
+    ====================================== */
+    .tooltip - left.tooltip - content {
+        left: auto;
+        right: calc(100 % +14 px);
+        top: 50 % ;
+        bottom: auto;
+        transform: translateY(-50 % )
+        translateX(8 px)
+        scale(.96);
+    }
+    .tooltip - left: hover.tooltip - content {
+        transform: translateY(-50 % )
+        translateX(0)
+        scale(1);
+    }
+    /* ======================================
+    Right
+    ====================================== */
+    .tooltip - right.tooltip - content {
+        left: calc(100 % +14 px);
+        top: 50 % ;
+        bottom: auto;
+        transform: translateY(-50 % )
+        translateX(-8 px)
+        scale(.96);
+    }
+    .tooltip - right: hover.tooltip - content {
+        transform: translateY(-50 % )
+        translateX(0)
+        scale(1);
+    }
+    /* ======================================
+    Dark
+    ====================================== */
+    .tooltip - dark.tooltip - content {
+        background: #09090B;
+
+}
+
+/* = === === === === === === === === === === === === =
+            Light ===
+            ===
+            === === === === === === === === === === == * /
+            .tooltip - light.tooltip - content {
+                background: #FFFFFF;
+                color: #0F172A;
+
+}
+
+.tooltip-light .tooltip-content::after{
+
+    background:# FFFFFF;
+            }
+            /* ======================================
+            Status
+            ====================================== */
+            .tooltip - success.tooltip - content {
+                border - color:
+                    rgba(16, 185, 129, .4);
+            }
+            .tooltip - warning.tooltip - content {
+                border - color:
+                    rgba(245, 158, 11, .4);
+            }
+            .tooltip - danger.tooltip - content {
+                border - color:
+                    rgba(239, 68, 68, .4);
+            }
+        /* ======================================
+        Responsive
+        ====================================== */
+        @media(hover: none) {
+            .tooltip - content {
+                display: none;
+            }
+        }

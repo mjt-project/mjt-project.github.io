@@ -1,0 +1,102 @@
+/*
+==========================================
+MJT Project Design System
+Version : 1.0.0
+==========================================
+*/
+:root {
+    /*======================================
+    Colors
+    ======================================*/
+    --color-primary: #3B82F6;
+    --color-primary-hover:# 2563 EB;
+    --color-primary-light: #60A5FA;
+
+    --color-secondary:# 22 C55E;
+    --color-secondary-hover: #16A34A;
+    --color-secondary-light:# 4 ADE80;
+    --color-accent: #8B5CF6;
+
+    --color-info:# 06 B6D4;
+    --color-success: #10B981;
+
+    --color-warning:# F59E0B;
+    --color-danger: #EF4444;
+    /*======================================
+    Background
+    ======================================*/
+    --bg-page: #09090B;
+
+    --bg-surface:# 111827;
+    --bg-card: rgba(255, 255, 255, .04);
+    --bg-card-hover: rgba(255, 255, 255, .07);
+    --bg-navbar: rgba(17, 24, 39, .75);
+    /*======================================
+    Typography
+    ======================================*/
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+
+    --text-disabled:# 64748 B;
+    /*======================================
+    Border
+    ======================================*/
+    --border-color: rgba(255, 255, 255, .08);
+    --border-hover: rgba(59, 130, 246, .35);
+    /*======================================
+    Radius
+    ======================================*/
+    --radius-xs: 6 px;
+    --radius-sm: 10 px;
+    --radius-md: 16 px;
+    --radius-lg: 22 px;
+    --radius-xl: 28 px;
+    --radius-pill: 999 px;
+    /*======================================
+    Shadow
+    ======================================*/
+    --shadow-sm:
+        0 4 px 12 px rgba(0, 0, 0, .15);
+    --shadow-md:
+        0 12 px 28 px rgba(0, 0, 0, .25);
+    --shadow-lg:
+        0 20 px 48 px rgba(0, 0, 0, .35);
+    --shadow-glow:
+        0 0 30 px rgba(59, 130, 246, .25);
+    /*======================================
+    Spacing
+    ======================================*/
+    --space-1: 4 px;
+    --space-2: 8 px;
+    --space-3: 12 px;
+    --space-4: 16 px;
+    --space-5: 24 px;
+    --space-6: 32 px;
+    --space-7: 48 px;
+    --space-8: 64 px;
+    --space-9: 96 px;
+    --space-10: 128 px;
+    /*======================================
+    Container
+    ======================================*/
+    --container-width: 1320 px;
+    /*======================================
+    Transition
+    ======================================*/
+    --transition-fast: .2 s;
+    --transition: .35 s;
+    --transition-slow: .6 s;
+    /*======================================
+    Blur
+    ======================================*/
+    --blur-sm: 8 px;
+    --blur-md: 14 px;
+    --blur-lg: 22 px;
+    /*======================================
+    Z Index
+    ======================================*/
+    --z-navbar: 1000;
+    --z-modal: 5000;
+    --z-toast: 9000;
+}

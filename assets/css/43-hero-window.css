@@ -1,0 +1,190 @@
+/*
+==========================================
+MJT Project Design System
+Hero Window
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Window
+====================================== */
+.hero - window {
+        position: relative;
+        overflow: hidden;
+        width: 100 % ;
+        border - radius: 28 px;
+        border: 1 px solid
+        var (--border - color);
+        background: linear - gradient(
+            180 deg,
+            rgba(255, 255, 255, .05),
+            rgba(255, 255, 255, .02)
+        );
+        backdrop - filter: blur(22 px);
+        box - shadow: var (--shadow - lg);
+    }
+    /* ======================================
+    Top Bar
+    ====================================== */
+    .hero - window - header {
+        display: flex;
+        align - items: center;
+        justify - content: space - between;
+        padding: 18 px 22 px;
+        border - bottom: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .03);
+    }
+    /* ======================================
+    Traffic Lights
+    ====================================== */
+    .hero - window - buttons {
+        display: flex;
+        gap: 10 px;
+    }
+    .hero - window - button {
+        width: 12 px;
+        height: 12 px;
+        border - radius: 50 % ;
+    }
+    .hero - window - button.red {
+        background: #FF5F57;
+    }
+    .hero - window - button.yellow {
+        background: #FEBC2E;
+    }
+    .hero - window - button.green {
+        background: #28C840;
+
+}
+
+/* = === === === === === === === === === === === === =
+            Title ===
+            ===
+            === === === === === === === === === === == * /
+            .hero - window - title {
+                color: var (--text - muted);
+                font - size: .85 rem;
+                font - weight: 600;
+                letter - spacing: .04 em;
+            }
+            /* ======================================
+            Body
+            ====================================== */
+            .hero - window - body {
+                padding: 34 px;
+                display: flex;
+                flex - direction: column;
+                gap: 28 px;
+            }
+            /* ======================================
+            Terminal
+            ====================================== */
+            .hero - terminal {
+                display: flex;
+                flex - direction: column;
+                gap: 14 px;
+                padding: 24 px;
+                border - radius: 18 px;
+                background: #0B1220;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    font-family:
+
+        "JetBrains Mono",
+
+        monospace;
+
+    font-size:.9rem;
+
+}
+
+.hero-terminal-line{
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:center;
+
+}
+
+.hero-terminal-prefix{
+
+    color:# 22 C55E;
+                user - select: none;
+            }
+            .hero - terminal - command {
+                color: #E2E8F0;
+            }
+            /* ======================================
+            Repository Preview
+            ====================================== */
+            .hero - repository {
+                display: flex;
+                flex - direction: column;
+                gap: 18 px;
+                padding: 24 px;
+                border - radius: 18 px;
+                border: 1 px solid
+                var (--border - color);
+                background: rgba(255, 255, 255, .03);
+            }
+            .hero - repository - title {
+                display: flex;
+                align - items: center;
+                justify - content: space - between;
+            }
+            .hero - repository - name {
+                color: var (--text - primary);
+                font - weight: 700;
+            }
+            .hero - repository - description {
+                color: var (--text - secondary);
+                line - height: 1.7;
+            }
+            /* ======================================
+            Topics
+            ====================================== */
+            .hero - topics {
+                display: flex;
+                flex - wrap: wrap;
+                gap: 10 px;
+            }
+            /* ======================================
+            Activity
+            ====================================== */
+            .hero - activity {
+                display: flex;
+                justify - content: space - between;
+                align - items: center;
+                padding - top: 18 px;
+                border - top: 1 px solid
+                var (--border - color);
+            }
+            /* ======================================
+            Glow
+            ====================================== */
+            .hero - window::before {
+                content: "";
+                position: absolute;
+                top: -120 px;
+                right: -120 px;
+                width: 280 px;
+                height: 280 px;
+                border - radius: 50 % ;
+                background: radial - gradient(
+                    rgba(59, 130, 246, .18),
+                    transparent 70 %
+                );
+                filter: blur(40 px);
+            }
+        /* ======================================
+        Responsive
+        ====================================== */
+        @media(max - width: 768 px) {
+            .hero - window - body {
+                padding: 24 px;
+            }
+        }

@@ -1,0 +1,120 @@
+/*
+==========================================
+MJT Project Design System
+FAQ
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+FAQ
+====================================== */
+.faq {
+    display: flex;
+    flex - direction: column;
+    gap: 20 px;
+    width: 100 % ;
+}
+/* ======================================
+Item
+====================================== */
+.faq - item {
+        overflow: hidden;
+        border - radius: 22 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+        transition: border - color
+        var (--transition),
+        box - shadow
+        var (--transition),
+        transform
+        var (--transition);
+    }
+    .faq - item: hover {
+        transform: translateY(-4 px);
+        border - color: var (--border - hover);
+        box - shadow: var (--shadow - md);
+    }
+    /* ======================================
+    Question
+    ====================================== */
+    .faq - question {
+        width: 100 % ;
+        display: flex;
+        align - items: center;
+        justify - content: space - between;
+        gap: 24 px;
+        padding: 24 px 28 px;
+        text - align: left;
+        cursor: pointer;
+    }
+    .faq - question h3 {
+        margin: 0;
+        font - size: 1.08 rem;
+        color: var (--text - primary);
+    }
+    /* ======================================
+    Icon
+    ====================================== */
+    .faq - icon {
+        width: 42 px;
+        height: 42 px;
+        display: grid;
+        place - items: center;
+        border - radius: 12 px;
+        flex - shrink: 0;
+        background: rgba(59, 130, 246, .10);
+        color: var (--color - primary);
+        transition: transform .3 s ease,
+        background .3 s ease;
+    }
+    .faq - item.active
+    .faq - icon {
+        transform: rotate(45 deg);
+    }
+    /* ======================================
+    Answer
+    ====================================== */
+    .faq - answer {
+        max - height: 0;
+        overflow: hidden;
+        transition:
+            max - height .45 s ease;
+    }
+    .faq - answer - content {
+        padding: 0 28 px 28 px;
+        color: var (--text - secondary);
+        line - height: 1.9;
+    }
+    /* ======================================
+    Active
+    ====================================== */
+    .faq - item.active {
+        border - color:
+            rgba(59, 130, 246, .25);
+    }
+    .faq - item.active
+    .faq - answer {
+        max - height: 500 px;
+    }
+    /* ======================================
+    Number
+    ====================================== */
+    .faq - number {
+        color: var (--text - muted);
+        font - size: .82 rem;
+        font - weight: 700;
+        letter - spacing: .08 em;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .faq - question {
+            padding: 20 px;
+        }
+        .faq - answer - content {
+            padding: 0 20 px 20 px;
+        }
+}

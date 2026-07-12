@@ -1,0 +1,121 @@
+/*
+==========================================
+MJT Project Design System
+Empty State
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Container
+====================================== */
+.empty - state {
+        display: flex;
+        flex - direction: column;
+        align - items: center;
+        justify - content: center;
+        text - align: center;
+        padding: 96 px 32 px;
+        border - radius: 28 px;
+        border: 1 px dashed
+        var (--border - color);
+        background: linear - gradient(
+            180 deg,
+            rgba(255, 255, 255, .03),
+            rgba(255, 255, 255, .015)
+        );
+        backdrop - filter: blur(18 px);
+    }
+    /* ======================================
+    Icon
+    ====================================== */
+    .empty - state - icon {
+        width: 96 px;
+        height: 96 px;
+        display: grid;
+        place - items: center;
+        margin - bottom: 28 px;
+        border - radius: 28 px;
+        background: linear - gradient(
+            135 deg,
+            rgba(59, 130, 246, .12),
+            rgba(34, 197, 94, .08)
+        );
+        color: var (--color - primary);
+    }
+    .empty - state - icon svg {
+        width: 48 px;
+        height: 48 px;
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .empty - state - title {
+        margin - bottom: 14 px;
+        color: var (--text - primary);
+        font - size: 1.8 rem;
+    }
+    .empty - state - description {
+        max - width: 560 px;
+        color: var (--text - secondary);
+        line - height: 1.9;
+    }
+    /* ======================================
+    Actions
+    ====================================== */
+    .empty - state - actions {
+        display: flex;
+        gap: 16 px;
+        flex - wrap: wrap;
+        justify - content: center;
+        margin - top: 36 px;
+    }
+    /* ======================================
+    Tips
+    ====================================== */
+    .empty - state - tips {
+        display: flex;
+        flex - wrap: wrap;
+        justify - content: center;
+        gap: 12 px;
+        margin - top: 28 px;
+    }
+    .empty - state - tip {
+        padding: 8 px 14 px;
+        border - radius: 999 px;
+        background: rgba(59, 130, 246, .08);
+        color: var (--color - primary);
+        font - size: .82 rem;
+        font - weight: 600;
+    }
+    /* ======================================
+    Animation
+    ====================================== */
+    .empty - state - icon {
+        animation: emptyFloat
+        4 s
+        ease - in - out
+        infinite;
+    }
+@keyframes emptyFloat {
+    0 % , 100 % {
+        transform: translateY(0);
+    }
+    50 % {
+        transform: translateY(-8 px);
+    }
+}
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .empty - state {
+            padding: 64 px 24 px;
+        }
+        .empty - state - actions {
+            width: 100 % ;
+            flex - direction: column;
+        }
+        .empty - state - actions.btn {
+            width: 100 % ;
+        }
+}

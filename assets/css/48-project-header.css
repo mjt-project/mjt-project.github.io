@@ -1,0 +1,129 @@
+/*
+==========================================
+MJT Project Design System
+Project Header
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Header
+====================================== */
+.project - header {
+        position: relative;
+        overflow: hidden;
+        margin - bottom: 48 px;
+        padding: 72 px 64 px;
+        border - radius: 32 px;
+        border: 1 px solid
+        var (--border - color);
+        background: linear - gradient(
+            135 deg,
+            rgba(59, 130, 246, .10),
+            rgba(34, 197, 94, .08),
+            rgba(255, 255, 255, .03)
+        );
+        backdrop - filter: blur(24 px);
+    }
+    /* ======================================
+    Glow
+    ====================================== */
+    .project - header::before {
+        content: "";
+        position: absolute;
+        top: -180 px;
+        right: -180 px;
+        width: 460 px;
+        height: 460 px;
+        border - radius: 50 % ;
+        background: radial - gradient(
+            rgba(59, 130, 246, .24),
+            transparent 72 %
+        );
+        filter: blur(80 px);
+    }
+    .project - header::after {
+        content: "";
+        position: absolute;
+        bottom: -160 px;
+        left: -160 px;
+        width: 360 px;
+        height: 360 px;
+        border - radius: 50 % ;
+        background: radial - gradient(
+            rgba(34, 197, 94, .16),
+            transparent 72 %
+        );
+        filter: blur(80 px);
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .project - header - content {
+        position: relative;
+        z - index: 2;
+        max - width: 900 px;
+    }
+    .project - header - badge {
+        margin - bottom: 20 px;
+    }
+    .project - header - title {
+        margin - bottom: 20 px;
+        color: var (--text - primary);
+        font - size: clamp(2.8 rem, 5 vw, 4.4 rem);
+        line - height: 1.1;
+    }
+    .project - header - description {
+        max - width: 720 px;
+        color: var (--text - secondary);
+        font - size: 1.08 rem;
+        line - height: 1.9;
+    }
+    /* ======================================
+    Statistics
+    ====================================== */
+    .project - header - stats {
+        display: flex;
+        flex - wrap: wrap;
+        gap: 42 px;
+        margin - top: 42 px;
+    }
+    .project - header - stat {
+        display: flex;
+        flex - direction: column;
+        gap: 8 px;
+    }
+    .project - header - value {
+        font - size: 2.2 rem;
+        font - weight: 800;
+        color: var (--text - primary);
+    }
+    .project - header - label {
+        color: var (--text - muted);
+        font - size: .9 rem;
+    }
+    /* ======================================
+    Actions
+    ====================================== */
+    .project - header - actions {
+        display: flex;
+        flex - wrap: wrap;
+        gap: 16 px;
+        margin - top: 42 px;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .project - header {
+            padding: 48 px 28 px;
+        }
+        .project - header - stats {
+            gap: 24 px;
+        }
+        .project - header - actions {
+            flex - direction: column;
+        }
+        .project - header - actions.btn {
+            width: 100 % ;
+        }
+}

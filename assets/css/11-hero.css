@@ -1,0 +1,239 @@
+/*
+==========================================
+MJT Project Design System
+Hero
+Version : 1.0.0
+==========================================
+*/
+.hero {
+    position: relative;
+    display: flex;
+    align - items: center;
+    min - height: 100 vh;
+    overflow: hidden;
+    isolation: isolate;
+}
+/* ======================================
+Background
+====================================== */
+.hero - background {
+        position: absolute;
+        inset: 0;
+        z - index: -3;
+    }
+    /* Aurora */
+    .hero - background::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial - gradient(circle at 20 % 25 % ,
+            rgba(59, 130, 246, .18),
+            transparent 32 % ),
+        radial - gradient(circle at 78 % 18 % ,
+            rgba(34, 197, 94, .14),
+            transparent 28 % ),
+        radial - gradient(circle at 55 % 85 % ,
+            rgba(139, 92, 246, .10),
+            transparent 32 % );
+        filter: blur(40 px);
+        animation: heroAurora 16 s ease - in - out infinite alternate;
+    }
+    /* Grid */
+    .hero - background::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: .05;
+        background - image: linear - gradient(
+            rgba(255, 255, 255, .08) 1 px,
+            transparent 1 px
+        ),
+        linear - gradient(
+            90 deg,
+            rgba(255, 255, 255, .08) 1 px,
+            transparent 1 px
+        );
+        background - size: 48 px 48 px;
+    }
+    /* ======================================
+    Container
+    ====================================== */
+    .hero > .container {
+        display: grid;
+        grid - template - columns: 1.15 fr
+        .85 fr;
+        align - items: center;
+        gap: 96 px;
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .hero - content {
+        display: flex;
+        flex - direction: column;
+        gap: 28 px;
+    }
+    .hero - badge {
+        width: max - content;
+    }
+    .hero - title {
+        max - width: 720 px;
+        font - size: clamp(3.75 rem, 7 vw, 6 rem);
+        line - height: 1.05;
+        letter - spacing: -.05 em;
+    }
+    .hero - description {
+        max - width: 640 px;
+        font - size: 1.18 rem;
+        color: var (--text - secondary);
+    }
+    /* ======================================
+    Buttons
+    ====================================== */
+    .hero - actions {
+        display: flex;
+        flex - wrap: wrap;
+        gap: 18 px;
+        margin - top: 12 px;
+    }
+    /* ======================================
+    Stats
+    ====================================== */
+    .hero - stats {
+        display: flex;
+        gap: 40 px;
+        margin - top: 32 px;
+    }
+    .hero - stat {
+        display: flex;
+        flex - direction: column;
+        gap: 6 px;
+    }
+    .hero - stat - number {
+        font - size: 2 rem;
+        font - weight: 700;
+        color: var (--text - primary);
+    }
+    .hero - stat - label {
+        color: var (--text - muted);
+        font - size: .92 rem;
+    }
+    /* ======================================
+    Visual
+    ====================================== */
+    .hero - visual {
+        position: relative;
+        display: flex;
+        align - items: center;
+        justify - content: center;
+    }
+    /* Floating Window */
+    .hero - window {
+        width: 100 % ;
+        max - width: 520 px;
+        padding: 28 px;
+        border - radius: 28 px;
+        background: rgba(255, 255, 255, .05);
+        border: 1 px solid
+        var (--border - color);
+        backdrop - filter: blur(18 px);
+        box - shadow: var (--shadow - lg);
+    }
+    /* ======================================
+    Floating Cards
+    ====================================== */
+    .hero - card {
+        position: absolute;
+        display: flex;
+        align - items: center;
+        gap: 12 px;
+        padding: 14 px 18 px;
+        border - radius: 18 px;
+        background: rgba(255, 255, 255, .06);
+        border: 1 px solid rgba(255, 255, 255, .08);
+        backdrop - filter: blur(16 px);
+        box - shadow: var (--shadow - md);
+    }
+    .hero - card.top {
+        top: -24 px;
+        right: -36 px;
+    }
+    .hero - card.left {
+        left: -48 px;
+        bottom: 80 px;
+    }
+    .hero - card.bottom {
+        bottom: -26 px;
+        right: 32 px;
+    }
+    /* ======================================
+    Glow
+    ====================================== */
+    .hero - glow {
+        position: absolute;
+        width: 520 px;
+        height: 520 px;
+        border - radius: 50 % ;
+        background: radial - gradient(
+            rgba(59, 130, 246, .25),
+            transparent 70 %
+        );
+        filter: blur(80 px);
+        z - index: -2;
+    }
+/* ======================================
+Animation
+====================================== */
+@keyframes heroAurora {
+    0 % {
+        transform: translateY(-20 px)
+        translateX(-10 px)
+        scale(1);
+    }
+    100 % {
+        transform: translateY(30 px)
+        translateX(20 px)
+        scale(1.15);
+    }
+}
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 1100 px) {
+    .hero > .container {
+            grid - template - columns: 1 fr;
+            gap: 72 px;
+        }
+        .hero - content {
+            text - align: center;
+            align - items: center;
+        }
+        .hero - description {
+            margin - inline: auto;
+        }
+        .hero - actions {
+            justify - content: center;
+        }
+        .hero - stats {
+            justify - content: center;
+        }
+}
+@media(max - width: 768 px) {
+    .hero {
+        padding - top: 96 px;
+        min - height: auto;
+    }
+    .hero - title {
+            font - size: 3 rem;
+        }
+        .hero - description {
+            font - size: 1 rem;
+        }
+        .hero - stats {
+            flex - wrap: wrap;
+            gap: 24 px;
+        }
+        .hero - card {
+            display: none;
+        }
+}

@@ -1,0 +1,184 @@
+/*
+==========================================
+MJT Project Design System
+Inputs
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Field
+====================================== */
+.field {
+    display: flex;
+    flex - direction: column;
+    gap: 12 px;
+    width: 100 % ;
+}
+/* ======================================
+Label
+====================================== */
+.label {
+    font - size: .92 rem;
+    font - weight: 600;
+    color: var (--text - primary);
+}
+.label - required::after {
+        content: " *";
+        color: var (--color - danger);
+    }
+    /* ======================================
+    Input
+    ====================================== */
+    .input {
+        width: 100 % ;
+        height: 56 px;
+        padding: 0 18 px;
+        border - radius: var (--radius - md);
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        color: var (--text - primary);
+        transition: border - color
+        var (--transition),
+        background
+        var (--transition),
+        box - shadow
+        var (--transition);
+    }
+    .input::placeholder {
+        color: var (--text - muted);
+    }
+    .input: hover {
+        border - color:
+            rgba(255, 255, 255, .18);
+    }
+    .input: focus {
+        border - color:
+            var (--color - primary);
+        box - shadow:
+            0 0 0 4 px rgba(59, 130, 246, .12);
+    }
+    /* ======================================
+    Textarea
+    ====================================== */
+    .textarea {
+        width: 100 % ;
+        min - height: 160 px;
+        resize: vertical;
+        padding: 18 px;
+        border - radius: var (--radius - lg);
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        color: var (--text - primary);
+        line - height: 1.7;
+        transition: border - color
+        var (--transition),
+        background
+        var (--transition),
+        box - shadow
+        var (--transition);
+    }
+    .textarea: focus {
+        border - color:
+            var (--color - primary);
+        box - shadow:
+            0 0 0 4 px rgba(59, 130, 246, .12);
+    }
+    /* ======================================
+    Select
+    ====================================== */
+    .select {
+        width: 100 % ;
+        height: 56 px;
+        padding: 0 18 px;
+        border - radius: var (--radius - md);
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        color: var (--text - primary);
+        cursor: pointer;
+        appearance: none;
+    }
+    /* ======================================
+    Input Group
+    ====================================== */
+    .input - group {
+        display: flex;
+        align - items: center;
+        gap: 12 px;
+        width: 100 % ;
+    }
+    .input - group.input {
+        flex: 1;
+    }
+    /* ======================================
+    Prefix / Suffix
+    ====================================== */
+    .input - prefix,
+    .input - suffix {
+        display: flex;
+        align - items: center;
+        justify - content: center;
+        min - width: 48 px;
+        height: 48 px;
+        color: var (--text - muted);
+    }
+    /* ======================================
+    Hint
+    ====================================== */
+    .input - hint {
+        font - size: .82 rem;
+        color: var (--text - muted);
+    }
+    /* ======================================
+    Error
+    ====================================== */
+    .field - error.input,
+    .field - error.textarea,
+    .field - error.select {
+        border - color:
+            var (--color - danger);
+    }
+    .field - error.input: focus,
+    .field - error.textarea: focus,
+    .field - error.select: focus {
+        box - shadow:
+            0 0 0 4 px rgba(239, 68, 68, .12);
+    }
+    .field - error.input - hint {
+        color: var (--color - danger);
+    }
+    /* ======================================
+    Success
+    ====================================== */
+    .field - success.input,
+    .field - success.textarea,
+    .field - success.select {
+        border - color:
+            var (--color - success);
+    }
+    .field - success.input: focus,
+    .field - success.textarea: focus,
+    .field - success.select: focus {
+        box - shadow:
+            0 0 0 4 px rgba(16, 185, 129, .12);
+    }
+    /* ======================================
+    Disabled
+    ====================================== */
+    .input: disabled,
+    .textarea: disabled,
+    .select: disabled {
+        opacity: .55;
+        cursor: not - allowed;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .input,
+    .select {
+        height: 52 px;
+    }
+}

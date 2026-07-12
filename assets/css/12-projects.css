@@ -1,0 +1,245 @@
+/*
+==========================================
+MJT Project Design System
+Projects
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Projects Section
+====================================== */
+.projects {
+    position: relative;
+}
+.projects - header {
+        display: flex;
+        align - items: flex - end;
+        justify - content: space - between;
+        gap: 32 px;
+        margin - bottom: 56 px;
+    }
+    .projects - title {
+        max - width: 720 px;
+    }
+    .projects - title p {
+        margin - top: 16 px;
+        max - width: 620 px;
+    }
+    /* ======================================
+    Toolbar
+    ====================================== */
+    .projects - toolbar {
+        display: flex;
+        align - items: center;
+        gap: 16 px;
+        margin - bottom: 48 px;
+        flex - wrap: wrap;
+    }
+    /* ======================================
+    Search
+    ====================================== */
+    .project - search {
+        flex: 1;
+        min - width: 280 px;
+        display: flex;
+        align - items: center;
+        gap: 14 px;
+        height: 56 px;
+        padding: 0 20 px;
+        border - radius: 18 px;
+        background: rgba(255, 255, 255, .04);
+        border: 1 px solid
+        var (--border - color);
+        backdrop - filter: blur(var (--blur - md));
+    }
+    .project - search input {
+        flex: 1;
+        color: var (--text - primary);
+    }
+    .project - search input::placeholder {
+        color: var (--text - muted);
+    }
+    /* ======================================
+    Filter
+    ====================================== */
+    .project - filter {
+        display: flex;
+        align - items: center;
+        gap: 12 px;
+        flex - wrap: wrap;
+    }
+    /* ======================================
+    Project List
+    ====================================== */
+    .project - list {
+        display: flex;
+        flex - direction: column;
+        gap: 28 px;
+    }
+    /* ======================================
+    Repository Card
+    ====================================== */
+    .repository {
+        position: relative;
+        display: flex;
+        flex - direction: column;
+        gap: 24 px;
+        padding: 32 px;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: linear - gradient(
+            180 deg,
+            rgba(255, 255, 255, .05),
+            rgba(255, 255, 255, .025)
+        );
+        backdrop - filter: blur(20 px);
+        transition: transform
+        var (--transition),
+        border - color
+        var (--transition),
+        background
+        var (--transition),
+        box - shadow
+        var (--transition);
+    }
+    .repository: hover {
+        transform: translateY(-6 px);
+        border - color: var (--border - hover);
+        box - shadow: var (--shadow - lg);
+    }
+    /* ======================================
+    Repository Header
+    ====================================== */
+    .repository - header {
+        display: flex;
+        justify - content: space - between;
+        align - items: flex - start;
+        gap: 24 px;
+    }
+    .repository - title {
+        display: flex;
+        align - items: center;
+        gap: 16 px;
+    }
+    .repository - icon {
+        width: 56 px;
+        height: 56 px;
+        border - radius: 18 px;
+        display: grid;
+        place - items: center;
+        background: rgba(59, 130, 246, .12);
+        color: var (--color - primary);
+    }
+    .repository - info {
+        display: flex;
+        flex - direction: column;
+        gap: 8 px;
+    }
+    .repository - info h3 {
+        font - size: 1.6 rem;
+    }
+    .repository - info p {
+        color: var (--text - secondary);
+    }
+    /* ======================================
+    Repository Meta
+    ====================================== */
+    .repository - meta {
+        display: flex;
+        flex - wrap: wrap;
+        gap: 14 px;
+    }
+    /* ======================================
+    Repository Footer
+    ====================================== */
+    .repository - footer {
+        display: flex;
+        align - items: center;
+        justify - content: space - between;
+        gap: 24 px;
+        flex - wrap: wrap;
+    }
+    .repository - stats {
+        display: flex;
+        flex - wrap: wrap;
+        gap: 24 px;
+    }
+    .repository - stat {
+        display: flex;
+        align - items: center;
+        gap: 8 px;
+        color: var (--text - muted);
+        font - size: .92 rem;
+    }
+    /* ======================================
+    Featured
+    ====================================== */
+    .repository - featured {
+        overflow: hidden;
+    }
+    .repository - featured::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial - gradient(
+            circle at top right,
+            rgba(59, 130, 246, .18),
+            transparent 45 %
+        ),
+        radial - gradient(
+            circle at bottom left,
+            rgba(34, 197, 94, .12),
+            transparent 40 %
+        );
+        pointer - events: none;
+    }
+    /* ======================================
+    Coming Soon
+    ====================================== */
+    .repository - coming {
+        opacity: .82;
+    }
+    /* ======================================
+    Empty State
+    ====================================== */
+    .projects - empty {
+        padding: 80 px 32 px;
+        text - align: center;
+        border - radius: 24 px;
+        border: 1 px dashed
+        var (--border - color);
+        background: rgba(255, 255, 255, .03);
+    }
+    .projects - empty h3 {
+        margin - bottom: 12 px;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 960 px) {
+    .projects - header {
+            flex - direction: column;
+            align - items: flex - start;
+        }
+        .repository - header {
+            flex - direction: column;
+        }
+        .repository - footer {
+            flex - direction: column;
+            align - items: flex - start;
+        }
+}
+@media(max - width: 640 px) {
+    .repository {
+        padding: 24 px;
+    }
+    .repository - title {
+            align - items: flex - start;
+        }
+        .repository - icon {
+            width: 48 px;
+            height: 48 px;
+            border - radius: 14 px;
+        }
+}

@@ -1,0 +1,157 @@
+/*
+==========================================
+MJT Project Design System
+Repository Languages
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Container
+====================================== */
+.repository - languages {
+        display: flex;
+        flex - direction: column;
+        gap: 22 px;
+    }
+    /* ======================================
+    Item
+    ====================================== */
+    .repository - language {
+        display: flex;
+        flex - direction: column;
+        gap: 10 px;
+    }
+    /* ======================================
+    Header
+    ====================================== */
+    .repository - language - header {
+        display: flex;
+        align - items: center;
+        justify - content: space - between;
+        gap: 18 px;
+    }
+    .repository - language - name {
+        display: flex;
+        align - items: center;
+        gap: 12 px;
+        font - weight: 600;
+        color: var (--text - primary);
+    }
+    .repository - language - percent {
+        color: var (--text - muted);
+        font - size: .88 rem;
+        font - weight: 600;
+    }
+    /* ======================================
+    Dot
+    ====================================== */
+    .repository - language - dot {
+        width: 12 px;
+        height: 12 px;
+        border - radius: 50 % ;
+        flex - shrink: 0;
+    }
+    /* ======================================
+    Progress
+    ====================================== */
+    .repository - language - bar {
+        overflow: hidden;
+        width: 100 % ;
+        height: 10 px;
+        border - radius: 999 px;
+        background: rgba(255, 255, 255, .05);
+    }
+    .repository - language - value {
+        height: 100 % ;
+        border - radius: 999 px;
+        transition: width .6 s ease;
+    }
+    /* ======================================
+    Languages
+    ====================================== */
+    .lang - java {
+        background: #F89820;
+    }
+    .lang - kotlin {
+        background: #A97BFF;
+    }
+    .lang - javascript {
+        background: #F7DF1E;
+    }
+    .lang - typescript {
+        background: #3178C6;
+
+}
+
+.lang-css{
+
+    background:# 563 D7C;
+    }
+    .lang - html {
+        background: #E34F26;
+    }
+    .lang - python {
+        background: #3776AB;
+
+}
+
+.lang-go{
+
+    background:# 00 ADD8;
+    }
+    .lang - rust {
+        background: #DEA584;
+    }
+    .lang - cpp {
+        background: #00599C;
+
+}
+
+.lang-c{
+
+    background:# 555555;
+    }
+    .lang - shell {
+        background: #89E051;
+
+}
+
+.lang-json{
+
+    background:# 8E8 E93;
+    }
+    .lang - markdown {
+        background: #6E7681;
+
+}
+
+.lang-yaml{
+
+    background:# CB171E;
+    }
+    /* ======================================
+    Legend
+    ====================================== */
+    .repository - language - legend {
+        display: flex;
+        flex - wrap: wrap;
+        gap: 14 px;
+        margin - top: 6 px;
+    }
+    .repository - language - tag {
+        display: flex;
+        align - items: center;
+        gap: 8 px;
+        color: var (--text - secondary);
+        font - size: .82 rem;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .repository - language - header {
+        align - items: flex - start;
+        flex - direction: column;
+        gap: 6 px;
+    }
+}

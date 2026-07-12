@@ -1,0 +1,154 @@
+/*
+==========================================
+MJT Project Design System
+Call To Action
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Section
+====================================== */
+.cta {
+    position: relative;
+    overflow: hidden;
+    border - radius: 32 px;
+    padding: 72 px 64 px;
+    border: 1 px solid
+    var (--border - color);
+    background: linear - gradient(
+        135 deg,
+        rgba(59, 130, 246, .12),
+        rgba(34, 197, 94, .08),
+        rgba(255, 255, 255, .03)
+    );
+    backdrop - filter: blur(24 px);
+    box - shadow: var (--shadow - lg);
+}
+/* ======================================
+Glow
+====================================== */
+.cta::before {
+        content: "";
+        position: absolute;
+        top: -220 px;
+        right: -220 px;
+        width: 520 px;
+        height: 520 px;
+        border - radius: 50 % ;
+        background: radial - gradient(
+            rgba(59, 130, 246, .25),
+            transparent 70 %
+        );
+        filter: blur(70 px);
+        pointer - events: none;
+    }
+    .cta::after {
+        content: "";
+        position: absolute;
+        bottom: -180 px;
+        left: -180 px;
+        width: 420 px;
+        height: 420 px;
+        border - radius: 50 % ;
+        background: radial - gradient(
+            rgba(34, 197, 94, .16),
+            transparent 70 %
+        );
+        filter: blur(70 px);
+        pointer - events: none;
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .cta - content {
+        position: relative;
+        z - index: 2;
+        max - width: 760 px;
+        margin: auto;
+        text - align: center;
+    }
+    /* ======================================
+    Title
+    ====================================== */
+    .cta - title {
+        margin - bottom: 22 px;
+        color: var (--text - primary);
+        font - size: clamp(2 rem, 4 vw, 3.2 rem);
+        line - height: 1.15;
+    }
+    .cta - description {
+        max - width: 640 px;
+        margin: 0 auto;
+        color: var (--text - secondary);
+        line - height: 1.9;
+        font - size: 1.05 rem;
+    }
+    /* ======================================
+    Actions
+    ====================================== */
+    .cta - actions {
+        display: flex;
+        justify - content: center;
+        align - items: center;
+        gap: 18 px;
+        flex - wrap: wrap;
+        margin - top: 42 px;
+    }
+    /* ======================================
+    Stats
+    ====================================== */
+    .cta - stats {
+        display: flex;
+        justify - content: center;
+        flex - wrap: wrap;
+        gap: 48 px;
+        margin - top: 56 px;
+    }
+    .cta - stat {
+        display: flex;
+        flex - direction: column;
+        gap: 8 px;
+    }
+    .cta - stat - value {
+        font - size: 2.3 rem;
+        font - weight: 800;
+        color: var (--text - primary);
+    }
+    .cta - stat - label {
+        color: var (--text - muted);
+        font - size: .9 rem;
+    }
+    /* ======================================
+    Animation
+    ====================================== */
+    .cta {
+        animation: ctaGlow
+        8 s
+        ease - in - out
+        infinite;
+    }
+@keyframes ctaGlow {
+    0 % , 100 % {
+        box - shadow: 0 0 0 rgba(59, 130, 246, 0);
+    }
+    50 % {
+        box - shadow: 0 0 70 px rgba(59, 130, 246, .15);
+    }
+}
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .cta {
+        padding: 48 px 26 px;
+    }
+    .cta - actions {
+            flex - direction: column;
+        }
+        .cta - actions.btn {
+            width: 100 % ;
+        }
+        .cta - stats {
+            gap: 28 px;
+        }
+}

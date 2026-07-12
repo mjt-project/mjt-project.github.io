@@ -1,0 +1,173 @@
+/*
+==========================================
+MJT Project Design System
+Organization
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Organization
+====================================== */
+.organization {
+    display: grid;
+    grid - template - columns: 340 px
+    1 fr;
+    gap: 48 px;
+    align - items: start;
+}
+/* ======================================
+Profile
+====================================== */
+.organization - profile {
+        position: sticky;
+        top: 110 px;
+        padding: 32 px;
+        border - radius: 28 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+    }
+    /* ======================================
+    Avatar
+    ====================================== */
+    .organization - avatar {
+        width: 132 px;
+        height: 132 px;
+        margin: 0 auto 24 px;
+        border - radius: 32 px;
+        display: grid;
+        place - items: center;
+        background: linear - gradient(
+            135 deg,
+            rgba(59, 130, 246, .16),
+            rgba(34, 197, 94, .10)
+        );
+    }
+    .organization - avatar img {
+        width: 72 px;
+        height: 72 px;
+        object - fit: contain;
+    }
+    /* ======================================
+    Name
+    ====================================== */
+    .organization - name {
+        text - align: center;
+        color: var (--text - primary);
+    }
+    .organization - handle {
+        margin - top: 8 px;
+        text - align: center;
+        color: var (--text - muted);
+    }
+    /* ======================================
+    Bio
+    ====================================== */
+    .organization - bio {
+        margin: 28 px 0;
+        color: var (--text - secondary);
+        line - height: 1.8;
+    }
+    /* ======================================
+    Information
+    ====================================== */
+    .organization - info {
+        display: flex;
+        flex - direction: column;
+        gap: 18 px;
+    }
+    .organization - info li {
+        display: flex;
+        align - items: center;
+        gap: 12 px;
+        color: var (--text - secondary);
+    }
+    .organization - info svg {
+        width: 18 px;
+        height: 18 px;
+        color: var (--color - primary);
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .organization - content {
+        display: flex;
+        flex - direction: column;
+        gap: 32 px;
+    }
+    /* ======================================
+    Banner
+    ====================================== */
+    .organization - banner {
+        position: relative;
+        overflow: hidden;
+        padding: 42 px;
+        border - radius: 28 px;
+        border: 1 px solid
+        var (--border - color);
+        background: linear - gradient(
+            135 deg,
+            rgba(59, 130, 246, .10),
+            rgba(34, 197, 94, .05),
+            rgba(255, 255, 255, .03)
+        );
+    }
+    .organization - banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial - gradient(
+            circle at top right,
+            rgba(59, 130, 246, .18),
+            transparent 55 %
+        );
+        pointer - events: none;
+    }
+    /* ======================================
+    Numbers
+    ====================================== */
+    .organization - stats {
+        display: grid;
+        grid - template - columns: repeat(4, 1 fr);
+        gap: 20 px;
+        margin - top: 32 px;
+    }
+    .organization - stat {
+        padding: 20 px;
+        border - radius: 18 px;
+        background: rgba(255, 255, 255, .04);
+    }
+    .organization - stat - value {
+        font - size: 2 rem;
+        font - weight: 800;
+        color: var (--text - primary);
+    }
+    .organization - stat - label {
+        margin - top: 8 px;
+        color: var (--text - muted);
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 1100 px) {
+    .organization {
+        grid - template - columns: 1 fr;
+    }
+    .organization - profile {
+            position: relative;
+            top: auto;
+        }
+        .organization - stats {
+            grid - template - columns:
+                repeat(2, 1 fr);
+        }
+}
+@media(max - width: 768 px) {
+    .organization - banner {
+            padding: 28 px;
+        }
+        .organization - stats {
+            grid - template - columns: 1 fr;
+        }
+}

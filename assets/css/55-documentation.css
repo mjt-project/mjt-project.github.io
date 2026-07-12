@@ -1,0 +1,147 @@
+/*
+==========================================
+MJT Project Design System
+Documentation
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Layout
+====================================== */
+.docs {
+    display: grid;
+    grid - template - columns: 300 px
+    minmax(0, 1 fr);
+    gap: 42 px;
+    align - items: start;
+}
+/* ======================================
+Sidebar
+====================================== */
+.docs - sidebar {
+        position: sticky;
+        top: 110 px;
+        overflow: hidden;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+    }
+    .docs - sidebar - header {
+        padding: 24 px;
+        border - bottom: 1 px solid
+        var (--border - color);
+    }
+    .docs - sidebar - title {
+        color: var (--text - primary);
+    }
+    .docs - nav {
+        display: flex;
+        flex - direction: column;
+        padding: 14 px;
+    }
+    .docs - nav a {
+        display: flex;
+        align - items: center;
+        gap: 12 px;
+        padding: 12 px 16 px;
+        border - radius: 12 px;
+        color: var (--text - secondary);
+        transition: all
+        var (--transition);
+    }
+    .docs - nav a: hover {
+        color: var (--text - primary);
+        background: rgba(59, 130, 246, .08);
+    }
+    .docs - nav a.active {
+        color: #fff;
+        background: linear - gradient(
+            135 deg,
+            var (--color - primary),
+            var (--color - secondary)
+        );
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .docs - content {
+        display: flex;
+        flex - direction: column;
+        gap: 36 px;
+    }
+    .docs - section {
+        padding: 34 px;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+    }
+    .docs - section h2 {
+        margin - bottom: 18 px;
+        color: var (--text - primary);
+    }
+    .docs - section p {
+        color: var (--text - secondary);
+        line - height: 1.9;
+    }
+    /* ======================================
+    Table
+    ====================================== */
+    .docs - table {
+        width: 100 % ;
+        overflow: hidden;
+        margin - top: 28 px;
+        border - radius: 18 px;
+        border: 1 px solid
+        var (--border - color);
+    }
+    .docs - table table {
+        width: 100 % ;
+        border - collapse: collapse;
+    }
+    .docs - table th {
+        padding: 16 px 20 px;
+        text - align: left;
+        color: var (--text - primary);
+        background: rgba(255, 255, 255, .05);
+    }
+    .docs - table td {
+        padding: 16 px 20 px;
+        border - top: 1 px solid
+        var (--border - color);
+        color: var (--text - secondary);
+    }
+    /* ======================================
+    Note
+    ====================================== */
+    .docs - note {
+        display: flex;
+        gap: 16 px;
+        margin - top: 24 px;
+        padding: 20 px;
+        border - left: 4 px solid
+        var (--color - primary);
+        border - radius: 16 px;
+        background: rgba(59, 130, 246, .08);
+    }
+    .docs - note svg {
+        width: 22 px;
+        height: 22 px;
+        flex - shrink: 0;
+        color: var (--color - primary);
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 1024 px) {
+    .docs {
+        grid - template - columns: 1 fr;
+    }
+    .docs - sidebar {
+        position: relative;
+        top: auto;
+    }
+}

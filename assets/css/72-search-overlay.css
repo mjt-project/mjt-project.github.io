@@ -1,0 +1,176 @@
+/*
+==========================================
+MJT Project Design System
+Search Overlay
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Overlay
+====================================== */
+.search - overlay {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align - items: flex - start;
+        justify - content: center;
+        padding - top: 120 px;
+        background: rgba(2, 6, 23, .72);
+        backdrop - filter: blur(18 px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3 s ease,
+        visibility .3 s ease;
+        z - index: 2000;
+    }
+    .search - overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    /* ======================================
+    Container
+    ====================================== */
+    .search - container {
+        width: min(760 px, calc(100 % -40 px));
+        overflow: hidden;
+        border - radius: 28 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(15, 23, 42, .94);
+        box - shadow: var (--shadow - xl);
+        transform: translateY(-20 px)
+        scale(.96);
+        transition: transform .3 s ease;
+    }
+    .search - overlay.active
+    .search - container {
+        transform: translateY(0)
+        scale(1);
+    }
+    /* ======================================
+    Input
+    ====================================== */
+    .search - input - wrapper {
+        display: flex;
+        align - items: center;
+        gap: 16 px;
+        padding: 22 px 26 px;
+        border - bottom: 1 px solid
+        var (--border - color);
+    }
+    .search - input - wrapper svg {
+        width: 24 px;
+        height: 24 px;
+        color: var (--color - primary);
+    }
+    .search - input {
+        flex: 1;
+        height: 48 px;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: var (--text - primary);
+        font - size: 1.15 rem;
+    }
+    /* ======================================
+    Shortcut
+    ====================================== */
+    .search - shortcut {
+        display: flex;
+        gap: 6 px;
+    }
+    .search - key {
+        min - width: 28 px;
+        height: 28 px;
+        display: grid;
+        place - items: center;
+        padding: 0 8 px;
+        border - radius: 8 px;
+        border:
+            1 px solid
+        var (--border - color);
+        color:
+            var (--text - muted);
+        font - size: .75 rem;
+        font - weight: 700;
+    }
+    /* ======================================
+    Results
+    ====================================== */
+    .search - results {
+        max - height: 480 px;
+        overflow - y: auto;
+    }
+    .search - result {
+        display: flex;
+        align - items: center;
+        gap: 16 px;
+        padding: 18 px 26 px;
+        cursor: pointer;
+        transition: background
+        var (--transition);
+    }
+    .search - result: hover,
+    .search - result.active {
+        background: rgba(59, 130, 246, .10);
+    }
+    /* ======================================
+    Icon
+    ====================================== */
+    .search - result - icon {
+        width: 42 px;
+        height: 42 px;
+        display: grid;
+        place - items: center;
+        border - radius: 12 px;
+        background: rgba(255, 255, 255, .05);
+        color: var (--color - primary);
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .search - result - content {
+        flex: 1;
+    }
+    .search - result - title {
+        color: var (--text - primary);
+        font - weight: 600;
+    }
+    .search - result - description {
+        margin - top: 4 px;
+        color:
+            var (--text - secondary);
+        font - size: .88 rem;
+    }
+    /* ======================================
+    Empty
+    ====================================== */
+    .search - empty {
+        padding: 48 px;
+        text - align: center;
+        color: var (--text - muted);
+    }
+    /* ======================================
+    Footer
+    ====================================== */
+    .search - footer {
+        display: flex;
+        justify - content: space - between;
+        align - items: center;
+        padding: 16 px 26 px;
+        border - top: 1 px solid
+        var (--border - color);
+        color: var (--text - muted);
+        font - size: .82 rem;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .search - overlay {
+            padding - top: 80 px;
+        }
+        .search - container {
+            width: calc(100 % -24 px);
+        }
+}

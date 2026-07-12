@@ -1,0 +1,179 @@
+/*
+==========================================
+MJT Project Design System
+Grid System
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Grid
+====================================== */
+.row {
+    display: grid;
+    gap: 32 px;
+}
+/* ======================================
+12 Columns
+====================================== */
+.cols - 12 {
+        grid - template - columns:
+            repeat(12, minmax(0, 1 fr));
+    }
+    /* ======================================
+    Auto Grid
+    ====================================== */
+    .auto - fit {
+        display: grid;
+        grid - template - columns: repeat(
+            auto - fit,
+            minmax(280 px, 1 fr)
+        );
+        gap: 32 px;
+    }
+    .auto - fill {
+        display: grid;
+        grid - template - columns: repeat(
+            auto - fill,
+            minmax(280 px, 1 fr)
+        );
+        gap: 32 px;
+    }
+    /* ======================================
+    Column Span
+    ====================================== */
+    .col - 1 {
+        grid - column: span 1;
+    }
+    .col - 2 {
+        grid - column: span 2;
+    }
+    .col - 3 {
+        grid - column: span 3;
+    }
+    .col - 4 {
+        grid - column: span 4;
+    }
+    .col - 5 {
+        grid - column: span 5;
+    }
+    .col - 6 {
+        grid - column: span 6;
+    }
+    .col - 7 {
+        grid - column: span 7;
+    }
+    .col - 8 {
+        grid - column: span 8;
+    }
+    .col - 9 {
+        grid - column: span 9;
+    }
+    .col - 10 {
+        grid - column: span 10;
+    }
+    .col - 11 {
+        grid - column: span 11;
+    }
+    .col - 12 {
+        grid - column: span 12;
+    }
+    /* ======================================
+    Row Span
+    ====================================== */
+    .row - 1 {
+        grid - row: span 1;
+    }
+    .row - 2 {
+        grid - row: span 2;
+    }
+    .row - 3 {
+        grid - row: span 3;
+    }
+    .row - 4 {
+        grid - row: span 4;
+    }
+    .row - 5 {
+        grid - row: span 5;
+    }
+    .row - 6 {
+        grid - row: span 6;
+    }
+    /* ======================================
+    Alignment
+    ====================================== */
+    .place - center {
+        place - items: center;
+    }
+    .place - start {
+        place - items: start;
+    }
+    .place - end {
+        place - items: end;
+    }
+    .content - center {
+        place - content: center;
+    }
+    .content - between {
+        place - content: space - between;
+    }
+    /* ======================================
+    Bento Layout
+    ====================================== */
+    .bento {
+        display: grid;
+        grid - template - columns: repeat(12, minmax(0, 1 fr));
+        grid - auto - rows: 220 px;
+        gap: 24 px;
+    }
+    .bento - lg {
+        grid - column: span 8;
+        grid - row: span 2;
+    }
+    .bento - md {
+        grid - column: span 4;
+        grid - row: span 2;
+    }
+    .bento - wide {
+        grid - column: span 8;
+    }
+    .bento - square {
+        grid - column: span 4;
+    }
+    .bento - full {
+        grid - column: span 12;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 1200 px) {
+    .bento {
+        grid - template - columns:
+            repeat(8, minmax(0, 1 fr));
+    }
+    .bento - lg {
+            grid - column: span 8;
+        }
+        .bento - md {
+            grid - column: span 4;
+        }
+}
+@media(max - width: 768 px) {
+    .cols - 12 {
+            grid - template - columns: 1 fr;
+        }
+        .grid - 2,
+        .grid - 3,
+        .grid - 4,
+        .auto - fit,
+        .auto - fill {
+            grid - template - columns: 1 fr;
+        }
+        .bento {
+            grid - template - columns: 1 fr;
+            grid - auto - rows: auto;
+        }
+        .bento > * {
+            grid - column: span 1!important;
+            grid - row: auto!important;
+        }
+}

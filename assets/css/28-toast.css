@@ -1,0 +1,132 @@
+/*
+==========================================
+MJT Project Design System
+Toast
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Container
+====================================== */
+.toast - container {
+        position: fixed;
+        top: 24 px;
+        right: 24 px;
+        display: flex;
+        flex - direction: column;
+        gap: 16 px;
+        width: min(380 px, calc(100 vw - 32 px));
+        z - index: 9999;
+        pointer - events: none;
+    }
+    /* ======================================
+    Toast
+    ====================================== */
+    .toast {
+        display: flex;
+        align - items: flex - start;
+        gap: 16 px;
+        padding: 18 px;
+        border - radius: 20 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(17, 24, 39, .92);
+        backdrop - filter: blur(18 px);
+        box - shadow: var (--shadow - lg);
+        pointer - events: auto;
+    }
+    /* ======================================
+    Icon
+    ====================================== */
+    .toast - icon {
+        width: 42 px;
+        height: 42 px;
+        display: grid;
+        place - items: center;
+        border - radius: 14 px;
+        flex - shrink: 0;
+        font - size: 1.1 rem;
+        background: rgba(255, 255, 255, .06);
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .toast - content {
+        flex: 1;
+    }
+    .toast - title {
+        font - weight: 700;
+        color: var (--text - primary);
+        margin - bottom: 4 px;
+    }
+    .toast - message {
+        color: var (--text - secondary);
+        line - height: 1.6;
+        font - size: .92 rem;
+    }
+    /* ======================================
+    Close
+    ====================================== */
+    .toast - close {
+        width: 32 px;
+        height: 32 px;
+        display: grid;
+        place - items: center;
+        border - radius: 10 px;
+        color: var (--text - muted);
+        transition: background
+        var (--transition),
+        color
+        var (--transition);
+    }
+    .toast - close: hover {
+        background: rgba(255, 255, 255, .08);
+        color: #fff;
+    }
+    /* ======================================
+    Types
+    ====================================== */
+    .toast - success {
+        border - left:
+            4 px solid
+        var (--color - success);
+    }
+    .toast - success.toast - icon {
+        color: var (--color - success);
+    }
+    .toast - warning {
+        border - left:
+            4 px solid
+        var (--color - warning);
+    }
+    .toast - warning.toast - icon {
+        color: var (--color - warning);
+    }
+    .toast - error {
+        border - left:
+            4 px solid
+        var (--color - danger);
+    }
+    .toast - error.toast - icon {
+        color: var (--color - danger);
+    }
+    .toast - info {
+        border - left:
+            4 px solid
+        var (--color - primary);
+    }
+    .toast - info.toast - icon {
+        color: var (--color - primary);
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .toast - container {
+        top: auto;
+        bottom: 16 px;
+        left: 16 px;
+        right: 16 px;
+        width: auto;
+    }
+}

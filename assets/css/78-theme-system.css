@@ -1,0 +1,162 @@
+/*
+==========================================
+MJT Project Design System
+Theme System
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Root Theme Variables
+====================================== */
+: root {
+    /*
+    Background
+    */
+    --bg - primary: #020617;
+
+    --bg-secondary:# 0 F172A;
+    --bg - tertiary: #1E293B;
+
+
+    /*
+    Surface
+    */
+
+    --surface:
+
+        rgba(255,255,255,.04);
+
+    --surface-hover:
+
+        rgba(255,255,255,.08);
+
+
+    /*
+    Text
+    */
+
+    --text-primary:# F8FAFC;
+    --text - secondary: #CBD5E1;
+    --text - muted: #94A3B8;
+
+
+    /*
+    Border
+    */
+
+    --border-color:
+
+        rgba(148,163,184,.16);
+
+    --border-hover:
+
+        rgba(59,130,246,.45);
+
+
+    /*
+    Brand
+    */
+
+    --color-primary:# 3 B82F6;
+    --color - secondary: #22C55E;
+
+
+    /*
+    Status
+    */
+
+    --color-success:# 22 C55E;
+    --color - warning: #F59E0B;
+    --color - danger: #EF4444;
+    /*
+    Shadow
+    */
+    --shadow - sm:
+        0 4 px 12 px rgba(0, 0, 0, .15);
+    --shadow - md:
+        0 12 px 30 px rgba(0, 0, 0, .22);
+    --shadow - lg:
+        0 24 px 60 px rgba(0, 0, 0, .32);
+    --shadow - xl:
+        0 40 px 90 px rgba(0, 0, 0, .45);
+    /*
+    Transition
+    */
+    --transition:
+        .25 s ease;
+    /*
+    Radius
+    */
+    --radius - sm: 12 px;
+    --radius - md: 18 px;
+    --radius - lg: 28 px;
+}
+/* ======================================
+Light Theme
+====================================== */
+[data - theme = "light"] {
+    --bg - primary: #F8FAFC;
+    --bg - secondary: #FFFFFF;
+    --bg - tertiary: #F1F5F9;
+    --surface:
+        rgba(15, 23, 42, .04);
+    --surface - hover:
+        rgba(15, 23, 42, .08);
+    --text - primary: #0F172A;
+
+    --text-secondary:# 475569;
+    --text - muted: #64748B;
+
+
+    --border-color:
+
+        rgba(15,23,42,.12);
+
+    --border-hover:
+
+        rgba(37,99,235,.45);
+
+
+    --shadow-sm:
+
+        0 4px 12px rgba(15,23,42,.08);
+
+    --shadow-md:
+
+        0 12px 30px rgba(15,23,42,.12);
+
+    --shadow-lg:
+
+        0 24px 60px rgba(15,23,42,.16);
+
+}
+
+
+/* = === === === === === === === === === === === === =
+        Auto System Theme ===
+        ===
+        === === === === === === === === === === == * /
+    @media(prefers - color - scheme: light) {
+            [data - theme = "auto"] {
+                --bg - primary: #F8FAFC;
+                --bg - secondary: #FFFFFF;
+                --text - primary: #0F172A;
+
+        --text-secondary:# 475569;
+                --text - muted: #64748B;
+
+    }
+
+}
+
+
+/* = === === === === === === === === === === === === =
+                    Theme Transition ===
+                    ===
+                    === === === === === === === === === === == * /
+                html.theme - transition,
+                    html.theme - transition * {
+                        transition: background - color .35 s ease,
+                        border - color .35 s ease,
+                        color .35 s ease!important;
+                    }

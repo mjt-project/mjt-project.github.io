@@ -1,0 +1,145 @@
+/*
+==========================================
+MJT Project Design System
+Light Theme
+Version : 1.0.0
+==========================================
+*/
+: root[data - theme = "light"] {
+    color - scheme: light;
+    --bg - page: #F8FAFC;
+    --bg - surface: #FFFFFF;
+    --bg - card: rgba(255, 255, 255, .82);
+    --bg - card - hover: rgba(255, 255, 255, .96);
+    --bg - navbar: rgba(248, 250, 252, .82);
+    --text - primary: #0F172A;
+
+    --text-secondary:# 475569;
+    --text - muted: #64748B;
+
+    --border-color:rgba(15,23,42,.08);
+
+    --border-hover:rgba(59,130,246,.28);
+
+    --shadow-sm:
+        0 4px 12px rgba(15,23,42,.08);
+
+    --shadow-md:
+        0 12px 30px rgba(15,23,42,.10);
+
+    --shadow-lg:
+        0 20px 48px rgba(15,23,42,.12);
+
+    --shadow-glow:
+        0 0 28px rgba(59,130,246,.18);
+
+}
+
+/* = === === === === === === === === === === === === =
+        Body ===
+        ===
+        === === === === === === === === === === == * / [data - theme = "light"] body {
+    background: linear - gradient(
+        180 deg,
+        #FFFFFF,
+        #F8FAFC 45 % ,
+        #EEF2F7 100 %
+    );
+    color: var (--text - primary);
+}
+/* ======================================
+Background
+====================================== */
+[data - theme = "light"] body::before {
+        background: radial - gradient(
+            circle at 18 % 18 % ,
+            rgba(59, 130, 246, .08),
+            transparent 34 %
+        ),
+        radial - gradient(
+            circle at 82 % 20 % ,
+            rgba(34, 197, 94, .08),
+            transparent 34 %
+        ),
+        radial - gradient(
+            circle at 55 % 88 % ,
+            rgba(139, 92, 246, .06),
+            transparent 36 %
+        );
+    }
+    [data - theme = "light"] body::after {
+        opacity: .04;
+    }
+/* ======================================
+Navbar
+====================================== */
+[data - theme = "light"].navbar.scrolled {
+    background: rgba(248, 250, 252, .82);
+    border - bottom: 1 px solid
+    var (--border - color);
+}
+/* ======================================
+Glass
+====================================== */
+[data - theme = "light"].glass {
+    background: rgba(255, 255, 255, .72);
+    border: 1 px solid rgba(15, 23, 42, .08);
+}
+/* ======================================
+Cards
+====================================== */
+[data - theme = "light"].card,
+[data - theme = "light"].repository,
+[data - theme = "light"].hero - window {
+    background: rgba(255, 255, 255, .86);
+    border: 1 px solid
+    var (--border - color);
+}
+/* ======================================
+Buttons
+====================================== */
+[data - theme = "light"].btn - secondary {
+    background: rgba(255, 255, 255, .78);
+}
+/* ======================================
+Inputs
+====================================== */
+[data - theme = "light"].input,
+[data - theme = "light"].textarea,
+[data - theme = "light"].select,
+[data - theme = "light"].search - box {
+    background: rgba(255, 255, 255, .82);
+}
+/* ======================================
+Footer
+====================================== */
+[data - theme = "light"].footer {
+    background: linear - gradient(
+        180 deg,
+        rgba(255, 255, 255, .92),
+        rgba(248, 250, 252, 1)
+    );
+}
+/* ======================================
+Selection
+====================================== */
+[data - theme = "light"]::selection {
+    background: rgba(59, 130, 246, .18);
+    color: #0F172A;
+
+}
+
+/* = === === === === === === === === === === === === =
+        Scrollbar ===
+        ===
+        === === === === === === === === === === == * / [data - theme = "light"]::-webkit - scrollbar -
+    track {
+        background: #F8FAFC;
+    }
+    [data - theme = "light"]::-webkit - scrollbar - thumb {
+        background: #CBD5E1;
+    }
+    [data - theme = "light"]::-webkit - scrollbar - thumb: hover {
+            background: #94A3B8;
+
+}

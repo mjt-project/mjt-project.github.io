@@ -1,0 +1,184 @@
+/*
+==========================================
+MJT Project Design System
+Notification Center
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Container
+====================================== */
+.notification - center {
+        position: relative;
+    }
+    /* ======================================
+    Toggle
+    ====================================== */
+    .notification - toggle {
+        position: relative;
+        width: 46 px;
+        height: 46 px;
+        display: grid;
+        place - items: center;
+        border - radius: 14 px;
+        color: var (--text - secondary);
+        background: rgba(255, 255, 255, .04);
+        border: 1 px solid
+        var (--border - color);
+        transition: all
+        var (--transition);
+    }
+    .notification - toggle: hover {
+        color: var (--text - primary);
+        border - color: var (--border - hover);
+    }
+    /* ======================================
+    Badge
+    ====================================== */
+    .notification - badge {
+        position: absolute;
+        top: -5 px;
+        right: -5 px;
+        min - width: 20 px;
+        height: 20 px;
+        padding: 0 6 px;
+        display: flex;
+        align - items: center;
+        justify - content: center;
+        border - radius: 999 px;
+        background: linear - gradient(
+            135 deg,
+            #EF4444,
+            #F97316
+        );
+        color: #fff;
+        font - size: .7 rem;
+        font - weight: 700;
+        border: 2 px solid
+        var (--bg - primary);
+    }
+    /* ======================================
+    Panel
+    ====================================== */
+    .notification - panel {
+        position: absolute;
+        top: calc(100 % +16 px);
+        right: 0;
+        width: 380 px;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(12 px)
+        scale(.96);
+        border - radius: 22 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(15, 23, 42, .92);
+        backdrop - filter: blur(24 px);
+        box - shadow: var (--shadow - xl);
+        transition: opacity .25 s ease,
+        visibility .25 s ease,
+        transform .25 s ease;
+        z - index: 1000;
+    }
+    .notification - center.active
+    .notification - panel {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0)
+        scale(1);
+    }
+    /* ======================================
+    Header
+    ====================================== */
+    .notification - header {
+        display: flex;
+        align - items: center;
+        justify - content: space - between;
+        padding: 20 px 22 px;
+        border - bottom: 1 px solid
+        var (--border - color);
+    }
+    .notification - header h3 {
+        color: var (--text - primary);
+    }
+    /* ======================================
+    List
+    ====================================== */
+    .notification - list {
+        max - height: 420 px;
+        overflow - y: auto;
+    }
+    .notification - item {
+        display: flex;
+        gap: 14 px;
+        padding: 18 px 22 px;
+        transition: background
+        var (--transition);
+    }
+    .notification - item: hover {
+        background: rgba(255, 255, 255, .05);
+    }
+    .notification - item.unread {
+        background: rgba(59, 130, 246, .08);
+    }
+    /* ======================================
+    Icon
+    ====================================== */
+    .notification - icon {
+        width: 42 px;
+        height: 42 px;
+        display: grid;
+        place - items: center;
+        flex - shrink: 0;
+        border - radius: 12 px;
+        color: var (--color - primary);
+        background: rgba(59, 130, 246, .12);
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .notification - content {
+        flex: 1;
+    }
+    .notification - title {
+        margin - bottom: 6 px;
+        color:
+            var (--text - primary);
+        font - weight: 600;
+    }
+    .notification - text {
+        color: var (--text - secondary);
+        font - size: .9 rem;
+        line - height: 1.6;
+    }
+    .notification - time {
+        display: block;
+        margin - top: 8 px;
+        color: var (--text - muted);
+        font - size: .78 rem;
+    }
+    /* ======================================
+    Footer
+    ====================================== */
+    .notification - footer {
+        padding: 16 px 22 px;
+        text - align: center;
+        border - top: 1 px solid
+        var (--border - color);
+    }
+    .notification - footer a {
+        color: var (--color - primary);
+        font - weight: 600;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .notification - panel {
+        position: fixed;
+        left: 16 px;
+        right: 16 px;
+        width: auto;
+    }
+}

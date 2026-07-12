@@ -1,0 +1,139 @@
+/*
+==========================================
+MJT Project Design System
+Statistics
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Grid
+====================================== */
+.stats {
+    display: grid;
+    grid - template - columns: repeat(4, 1 fr);
+    gap: 28 px;
+}
+/* ======================================
+Card
+====================================== */
+.stat - card {
+        position: relative;
+        overflow: hidden;
+        padding: 34 px;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+        transition: transform
+        var (--transition),
+        border - color
+        var (--transition),
+        box - shadow
+        var (--transition);
+    }
+    .stat - card: hover {
+        transform: translateY(-8 px);
+        border - color: var (--border - hover);
+        box - shadow: var (--shadow - lg);
+    }
+    /* ======================================
+    Glow
+    ====================================== */
+    .stat - card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity .35 s;
+        background: radial - gradient(
+            circle at top right,
+            rgba(59, 130, 246, .16),
+            transparent 60 %
+        );
+    }
+    .stat - card: hover::before {
+        opacity: 1;
+    }
+    /* ======================================
+    Icon
+    ====================================== */
+    .stat - icon {
+        width: 64 px;
+        height: 64 px;
+        display: grid;
+        place - items: center;
+        border - radius: 18 px;
+        margin - bottom: 22 px;
+        color: var (--color - primary);
+        background: rgba(59, 130, 246, .12);
+    }
+    .stat - icon svg {
+        width: 30 px;
+        height: 30 px;
+    }
+    /* ======================================
+    Number
+    ====================================== */
+    .stat - number {
+        margin - bottom: 8 px;
+        font - size: 3 rem;
+        font - weight: 800;
+        line - height: 1;
+        color: var (--text - primary);
+    }
+    /* ======================================
+    Title
+    ====================================== */
+    .stat - title {
+        font - size: 1 rem;
+        font - weight: 600;
+        color: var (--text - primary);
+    }
+    .stat - description {
+        margin - top: 10 px;
+        color: var (--text - secondary);
+        line - height: 1.7;
+    }
+    /* ======================================
+    Trend
+    ====================================== */
+    .stat - trend {
+        display: inline - flex;
+        align - items: center;
+        gap: 8 px;
+        margin - top: 22 px;
+        padding: 6 px 12 px;
+        border - radius: 999 px;
+        font - size: .78 rem;
+        font - weight: 700;
+    }
+    .stat - trend.up {
+        color: var (--color - success);
+        background: rgba(34, 197, 94, .12);
+    }
+    .stat - trend.down {
+        color: var (--color - danger);
+        background: rgba(239, 68, 68, .12);
+    }
+    .stat - trend.neutral {
+        color: var (--text - secondary);
+        background: rgba(255, 255, 255, .06);
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 1200 px) {
+    .stats {
+        grid - template - columns:
+            repeat(2, 1 fr);
+    }
+}
+@media(max - width: 768 px) {
+    .stats {
+        grid - template - columns: 1 fr;
+    }
+    .stat - card {
+        padding: 28 px;
+    }
+}

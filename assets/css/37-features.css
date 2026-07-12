@@ -1,0 +1,138 @@
+/*
+==========================================
+MJT Project Design System
+Features
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Features
+====================================== */
+.features {
+    display: grid;
+    grid - template - columns: repeat(3, 1 fr);
+    gap: 32 px;
+}
+/* ======================================
+Card
+====================================== */
+.feature {
+    position: relative;
+    padding: 36 px;
+    overflow: hidden;
+    border - radius: 24 px;
+    border: 1 px solid
+    var (--border - color);
+    background: rgba(255, 255, 255, .04);
+    backdrop - filter: blur(18 px);
+    transition: transform
+    var (--transition),
+    border - color
+    var (--transition),
+    box - shadow
+    var (--transition);
+}
+.feature: hover {
+        transform: translateY(-8 px);
+        border - color: var (--border - hover);
+        box - shadow: var (--shadow - lg);
+    }
+    /* ======================================
+    Glow
+    ====================================== */
+    .feature::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity .35 s;
+        background: radial - gradient(
+            circle at top right,
+            rgba(59, 130, 246, .16),
+            transparent 55 %
+        );
+    }
+    .feature: hover::before {
+        opacity: 1;
+    }
+    /* ======================================
+    Icon
+    ====================================== */
+    .feature - icon {
+        width: 68 px;
+        height: 68 px;
+        display: grid;
+        place - items: center;
+        border - radius: 20 px;
+        margin - bottom: 24 px;
+        background: linear - gradient(
+            135 deg,
+            rgba(59, 130, 246, .18),
+            rgba(34, 197, 94, .12)
+        );
+        color: var (--color - primary);
+    }
+    .feature - icon svg {
+        width: 32 px;
+        height: 32 px;
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .feature - title {
+        margin - bottom: 14 px;
+        color: var (--text - primary);
+    }
+    .feature - description {
+        color: var (--text - secondary);
+        line - height: 1.8;
+    }
+    /* ======================================
+    Footer
+    ====================================== */
+    .feature - footer {
+        display: flex;
+        align - items: center;
+        justify - content: space - between;
+        margin - top: 28 px;
+    }
+    .feature - link {
+        display: inline - flex;
+        align - items: center;
+        gap: 8 px;
+        color: var (--color - primary);
+        font - weight: 600;
+    }
+    .feature - link svg {
+        width: 18 px;
+        height: 18 px;
+        transition: transform
+        var (--transition);
+    }
+    .feature: hover
+    .feature - link svg {
+        transform: translateX(4 px);
+    }
+    /* ======================================
+    Number
+    ====================================== */
+    .feature - number {
+        font - size: 3.2 rem;
+        font - weight: 800;
+        opacity: .08;
+        user - select: none;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 1100 px) {
+    .features {
+        grid - template - columns:
+            repeat(2, 1 fr);
+    }
+}
+@media(max - width: 768 px) {
+    .features {
+        grid - template - columns: 1 fr;
+    }
+}

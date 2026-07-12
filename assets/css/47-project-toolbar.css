@@ -1,0 +1,134 @@
+/*
+==========================================
+MJT Project Design System
+Project Toolbar
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Toolbar
+====================================== */
+.project - toolbar {
+        display: flex;
+        align - items: center;
+        justify - content: space - between;
+        gap: 24 px;
+        margin - bottom: 36 px;
+        padding: 18 px 22 px;
+        border - radius: 22 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+    }
+    /* ======================================
+    Left
+    ====================================== */
+    .project - toolbar - left {
+        display: flex;
+        align - items: center;
+        gap: 18 px;
+        flex - wrap: wrap;
+    }
+    /* ======================================
+    Search
+    ====================================== */
+    .project - search {
+        position: relative;
+        min - width: 340 px;
+    }
+    .project - search svg {
+        position: absolute;
+        top: 50 % ;
+        left: 18 px;
+        width: 18 px;
+        height: 18 px;
+        transform: translateY(-50 % );
+        color: var (--text - muted);
+    }
+    .project - search input {
+        width: 100 % ;
+        height: 50 px;
+        padding - left: 48 px;
+        padding - right: 18 px;
+        border - radius: 14 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        color: var (--text - primary);
+    }
+    .project - search input: focus {
+        border - color:
+            var (--color - primary);
+    }
+    /* ======================================
+    Select
+    ====================================== */
+    .project - sort {
+        min - width: 180 px;
+    }
+    .project - sort select {
+        width: 100 % ;
+        height: 50 px;
+        padding: 0 18 px;
+        border - radius: 14 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        color: var (--text - primary);
+    }
+    /* ======================================
+    Right
+    ====================================== */
+    .project - toolbar - right {
+        display: flex;
+        align - items: center;
+        gap: 16 px;
+    }
+    /* ======================================
+    Counter
+    ====================================== */
+    .project - counter {
+        color: var (--text - muted);
+        font - size: .92 rem;
+        white - space: nowrap;
+    }
+    .project - counter strong {
+        color: var (--text - primary);
+    }
+    /* ======================================
+    Divider
+    ====================================== */
+    .project - divider {
+        width: 1 px;
+        height: 34 px;
+        background: var (--border - color);
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 1024 px) {
+    .project - toolbar {
+            flex - direction: column;
+            align - items: stretch;
+        }
+        .project - toolbar - right {
+            justify - content: space - between;
+        }
+}
+@media(max - width: 768 px) {
+    .project - toolbar - left {
+            flex - direction: column;
+            align - items: stretch;
+        }
+        .project - search {
+            min - width: 100 % ;
+        }
+        .project - sort {
+            width: 100 % ;
+        }
+        .project - toolbar - right {
+            flex - wrap: wrap;
+            gap: 12 px;
+        }
+}

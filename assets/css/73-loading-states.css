@@ -1,0 +1,188 @@
+/*
+==========================================
+MJT Project Design System
+Loading States
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Global Loading
+====================================== */
+.loading {
+    display: flex;
+    align - items: center;
+    justify - content: center;
+}
+/* ======================================
+Spinner
+====================================== */
+.spinner {
+    width: 42 px;
+    height: 42 px;
+    border - radius: 50 % ;
+    border: 4 px solid rgba(255, 255, 255, .12);
+    border - top - color: var (--color - primary);
+    animation: spinnerRotate
+    .8 s
+    linear
+    infinite;
+}
+@keyframes spinnerRotate {
+    from {
+        transform: rotate(0 deg);
+    }
+    to {
+        transform: rotate(360 deg);
+    }
+}
+/* ======================================
+Dots
+====================================== */
+.loading - dots {
+        display: flex;
+        align - items: center;
+        gap: 8 px;
+    }
+    .loading - dot {
+        width: 10 px;
+        height: 10 px;
+        border - radius: 50 % ;
+        background: var (--color - primary);
+        animation: loadingBounce
+        1.2 s
+        infinite
+        ease - in - out;
+    }
+    .loading - dot: nth - child(2) {
+        animation - delay: .15 s;
+    }
+    .loading - dot: nth - child(3) {
+        animation - delay: .3 s;
+    }
+@keyframes loadingBounce {
+    0 % ,
+        80 % ,
+        100 % {
+            transform: scale(.5);
+            opacity: .5;
+        }
+    40 % {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* ======================================
+Skeleton
+====================================== */
+.skeleton {
+    position: relative;
+    overflow: hidden;
+    border - radius: 12 px;
+    background: rgba(255, 255, 255, .06);
+}
+.skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100 % );
+    background: linear - gradient(
+        90 deg,
+        transparent,
+        rgba(255, 255, 255, .12),
+        transparent
+    );
+    animation: skeletonMove
+    1.6 s
+    infinite;
+}
+@keyframes skeletonMove {
+    100 % {
+        transform: translateX(100 % );
+    }
+}
+/* ======================================
+Skeleton Sizes
+====================================== */
+.skeleton - text {
+        height: 16 px;
+        width: 100 % ;
+    }
+    .skeleton - title {
+        height: 28 px;
+        width: 70 % ;
+    }
+    .skeleton - avatar {
+        width: 64 px;
+        height: 64 px;
+        border - radius: 50 % ;
+    }
+    .skeleton - card {
+        height: 240 px;
+        width: 100 % ;
+    }
+    /* ======================================
+    Page Loader
+    ====================================== */
+    .page - loader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align - items: center;
+        justify - content: center;
+        background: var (--bg - primary);
+        z - index: 9999;
+        transition: opacity .4 s ease,
+        visibility .4 s ease;
+    }
+    .page - loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+    /* ======================================
+    Progress Loader
+    ====================================== */
+    .loading - progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3 px;
+        width: 0;
+        background: linear - gradient(
+            90 deg,
+            var (--color - primary),
+            var (--color - secondary)
+        );
+        z - index: 9999;
+        transition: width .25 s ease;
+    }
+    /* ======================================
+    Button Loading
+    ====================================== */
+    .btn.loading {
+        position: relative;
+        pointer - events: none;
+        color: transparent;
+    }
+    .btn.loading::after {
+        content: "";
+        position: absolute;
+        width: 18 px;
+        height: 18 px;
+        border - radius: 50 % ;
+        border: 2 px solid rgba(255, 255, 255, .4);
+        border - top - color: #fff;
+        animation: spinnerRotate
+        .7 s
+        linear
+        infinite;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(prefers - reduced - motion: reduce) {
+    .spinner,
+    .loading - dot,
+        .skeleton::after {
+            animation: none;
+        }
+}

@@ -1,0 +1,131 @@
+/*
+==========================================
+MJT Project Design System
+Print Styles
+Version : 1.0.0
+==========================================
+*/
+
+@media print{
+
+    @page{
+        size:A4;
+        margin:16mm;
+    }
+
+    *{
+        animation:none !important;
+        transition:none !important;
+        box-shadow:none !important;
+        text-shadow:none !important;
+        backdrop-filter:none !important;
+        filter:none !important;    }
+
+    html{
+        font-size:11pt;
+    }
+
+    body{
+        background:#FFFFFF !important;
+        color:#000000 !important;
+        overflow:visible;
+    }
+
+    body::before,
+    body::after,
+    .hero-glow,
+    .cursor,
+    .cursor-dot,
+    .scroll-progress{
+        display:none !important;
+    }
+
+    .navbar,
+    .navbar-mobile,
+    .footer,
+    .hero-card,
+    .btn,
+    .modal,
+    .tooltip-content{
+        display:none !important;
+    }
+
+    .container{
+        width:100%;
+        max-width:none;
+        margin:0;
+        padding:0;
+    }
+
+    section{
+        padding:0;
+        margin-bottom:24px;
+        break-inside:avoid;
+        page-break-inside:avoid;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4{
+        color:#000;
+        break-after:avoid;
+    }
+
+    p,
+    li{
+        color:#222;
+    }
+
+    .card,
+    .repository,
+    .glass{
+        background:#FFF !important;
+        border:1px solid #D1D5DB !important;
+        break-inside:avoid;
+        page-break-inside:avoid;
+    }
+
+    img,
+    svg{
+        max-width:100%;
+        page-break-inside:avoid;
+    }
+
+    a{
+        color:#000;
+        text-decoration:underline;
+    }
+
+    a[href]::after{
+        content:" (" attr(href) ")";
+        font-size:9pt;
+        color:#555;
+        word-break:break-all;
+    }
+
+    code,
+    pre{
+        border:1px solid #D1D5DB;
+        background:#F8FAFC !important;
+        color:#111827;
+    }
+
+    table{
+        width:100%;
+        border-collapse:collapse;
+    }
+
+    table th,
+    table td{
+        border:1px solid #D1D5DB;
+        padding:8px;
+    }
+
+    .badge{
+        border:1px solid #999;
+        background:#FFF !important;
+        color:#000 !important;
+    }
+
+}

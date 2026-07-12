@@ -1,0 +1,206 @@
+/*
+==========================================
+MJT Project Design System
+Responsive
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+2XL
+====================================== */
+@media(max - width: 1536 px) {
+    : root {
+        --container - width: 1280 px;
+    }
+}
+/* ======================================
+XL
+====================================== */
+@media(max - width: 1280 px) {
+    : root {
+        --container - width: 1140 px;
+    }
+    .container {
+        width: min(100 % -40 px,
+            var (--container - width));
+    }
+    .hero > .container {
+            gap: 64 px;
+        }
+        .footer - container {
+            gap: 48 px;
+        }
+}
+/* ======================================
+LG
+====================================== */
+@media(max - width: 1024 px) {
+    : root {
+        --container - width: 960 px;
+    }
+    section {
+        padding - block: 96 px;
+    }
+    .hero {
+        min - height: auto;
+        padding - top: 120 px;
+        padding - bottom: 80 px;
+    }
+    .hero > .container {
+            grid - template - columns: 1 fr;
+            gap: 72 px;
+        }
+        .hero - content {
+            text - align: center;
+            align - items: center;
+        }
+        .hero - description {
+            margin - inline: auto;
+        }
+        .hero - actions {
+            justify - content: center;
+        }
+        .projects - header {
+            flex - direction: column;
+            align - items: flex - start;
+        }
+        .repository - header {
+            flex - direction: column;
+        }
+}
+/* ======================================
+MD
+====================================== */
+@media(max - width: 768 px) {
+    : root {
+        --container - width: 100 % ;
+    }
+    html {
+        font - size: 15 px;
+    }
+    .container {
+        width: min(100 % -28 px, 100 % );
+    }
+    h1 {
+        font - size: 3 rem;
+    }
+    h2 {
+        font - size: 2.3 rem;
+    }
+    h3 {
+        font - size: 1.6 rem;
+    }
+    .hero {
+        padding - top: 100 px;
+    }
+    .hero - title {
+            font - size: 3 rem;
+        }
+        .hero - description {
+            font - size: 1 rem;
+        }
+        .hero - stats {
+            justify - content: center;
+            flex - wrap: wrap;
+            gap: 24 px;
+        }
+        .hero - card {
+            display: none;
+        }
+        .grid - 2,
+        .grid - 3,
+        .grid - 4,
+        .auto - fit,
+        .auto - fill {
+            grid - template - columns: 1 fr;
+        }
+        .repository {
+            padding: 24 px;
+        }
+        .footer - container {
+            grid - template - columns: 1 fr;
+        }
+        .footer - bottom {
+            flex - direction: column;
+            align - items: flex - start;
+        }
+}
+/* ======================================
+SM
+====================================== */
+@media(max - width: 640 px) {
+    html {
+        font - size: 14 px;
+    }
+    section {
+        padding - block: 72 px;
+    }
+    .btn {
+        width: 100 % ;
+    }
+    .hero - actions {
+            width: 100 % ;
+        }
+        .repository - footer {
+            flex - direction: column;
+            align - items: flex - start;
+        }
+        .repository - stats {
+            gap: 16 px;
+        }
+        .project - search {
+            min - width: 100 % ;
+        }
+        .card {
+            padding: 24 px;
+        }
+}
+/* ======================================
+XS
+====================================== */
+@media(max - width: 480 px) {
+    .container {
+        width: min(100 % -20 px, 100 % );
+    }
+    .hero - title {
+            font - size: 2.4 rem;
+        }
+        .hero - stat - number {
+            font - size: 1.5 rem;
+        }
+        .navbar {
+            height: 68 px;
+        }
+        .navbar - brand span {
+            font - size: .95 rem;
+        }
+        .repository - icon {
+            width: 46 px;
+            height: 46 px;
+        }
+        .repository - info h3 {
+            font - size: 1.35 rem;
+        }
+        .badge {
+            font - size: .72 rem;
+        }
+}
+/* ======================================
+Landscape Phones
+====================================== */
+@media(max - height: 600 px) and(orientation: landscape) {
+    .hero {
+        min - height: unset;
+        padding - block: 120 px 80 px;
+    }
+}
+/* ======================================
+Reduce Motion
+====================================== */
+@media(prefers - reduced - motion: reduce) {
+    *{
+        animation: none!important;
+        transition: none!important;
+        scroll - behavior: auto!important;
+    }
+}

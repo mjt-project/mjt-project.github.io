@@ -1,0 +1,172 @@
+/*
+==========================================
+MJT Project Design System
+Code & Syntax Highlight
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Code Block
+====================================== */
+.code - block {
+        position: relative;
+        overflow: hidden;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: #0B1220;
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* = === === === === === === === === === === === === =
+            Header ===
+            ===
+            === === === === === === === === === === == * /
+            .code - header {
+                display: flex;
+                align - items: center;
+                justify - content: space - between;
+                padding: 14 px 18 px;
+                border - bottom: 1 px solid rgba(255, 255, 255, .06);
+                background: rgba(255, 255, 255, .03);
+            }
+            .code - title {
+                display: flex;
+                align - items: center;
+                gap: 10 px;
+                font - size: .9 rem;
+                font - weight: 600;
+                color: var (--text - secondary);
+            }
+            .code - actions {
+                display: flex;
+                align - items: center;
+                gap: 10 px;
+            }
+            /* ======================================
+            Mac Buttons
+            ====================================== */
+            .code - dots {
+                display: flex;
+                gap: 8 px;
+            }
+            .code - dot {
+                width: 12 px;
+                height: 12 px;
+                border - radius: 50 % ;
+            }
+            .code - dot.red {
+                background: #FF5F57;
+            }
+            .code - dot.yellow {
+                background: #FEBC2E;
+            }
+            .code - dot.green {
+                background: #28C840;
+
+}
+
+/* = === === === === === === === === === === === === =
+                    Copy ===
+                    ===
+                    === === === === === === === === === === == * /
+                    .code - copy {
+                        padding: 6 px 12 px;
+                        border - radius: 10 px;
+                        font - size: .8 rem;
+                        color: var (--text - secondary);
+                        background: rgba(255, 255, 255, .05);
+                        transition: all
+                        var (--transition);
+                    }
+                    .code - copy: hover {
+                        background: rgba(255, 255, 255, .08);
+                    }
+                    /* ======================================
+                    Pre
+                    ====================================== */
+                    .code - block pre {
+                        overflow: auto;
+                        padding: 28 px;
+                        font - size: .92 rem;
+                        line - height: 1.75;
+                        color: #E2E8F0;
+                    }
+                /* ======================================
+                Inline Code
+                ====================================== */
+                code {
+                    padding: 2 px 8 px;
+                    border - radius: 8 px;
+                    background: rgba(59, 130, 246, .10);
+                    color: #93C5FD;
+
+    font-family:
+
+        "JetBrains Mono",
+
+        Consolas,
+
+        monospace;
+
+    font-size:.92em;
+
+}
+
+pre code{
+
+    padding:0;
+
+    background:none;
+
+    color:inherit;
+
+}
+
+/* = === === === === === === === === === === === === =
+                        Scrollbar ===
+                        ===
+                        === === === === === === === === === === == * /
+                        .code - block pre::-webkit - scrollbar {
+                            height: 10 px;
+                        }
+                        .code - block pre::-webkit - scrollbar - thumb {
+                            background: rgba(255, 255, 255, .12);
+                            border - radius: 999 px;
+                        }
+                        /* ======================================
+                        Language Badge
+                        ====================================== */
+                        .code - language {
+                            position: absolute;
+                            top: 16 px;
+                            right: 18 px;
+                            padding: 6 px 12 px;
+                            border - radius: 999 px;
+                            background: rgba(59, 130, 246, .12);
+                            color: #93C5FD;
+
+    font-size:.75rem;
+
+    font-weight:600;
+
+}
+
+/* = === === === === === === === === === === === === =
+                                Selection ===
+                                ===
+                                === === === === === === === === === === == * /
+                                .code - block::selection {
+                                    background: rgba(59, 130, 246, .30);
+                                }
+                            /* ======================================
+                            Responsive
+                            ====================================== */
+                            @media(max - width: 768 px) {
+                                .code - block pre {
+                                    padding: 20 px;
+                                    font - size: .85 rem;
+                                }
+                            }

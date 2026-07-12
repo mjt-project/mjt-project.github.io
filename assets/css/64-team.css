@@ -1,0 +1,169 @@
+/*
+==========================================
+MJT Project Design System
+Team
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Grid
+====================================== */
+.team {
+    display: grid;
+    grid - template - columns: repeat(auto - fill, minmax(300 px, 1 fr));
+    gap: 28 px;
+}
+/* ======================================
+Card
+====================================== */
+.team - card {
+        position: relative;
+        overflow: hidden;
+        padding: 32 px;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+        transition: transform
+        var (--transition),
+        border - color
+        var (--transition),
+        box - shadow
+        var (--transition);
+    }
+    .team - card: hover {
+        transform: translateY(-8 px);
+        border - color: var (--border - hover);
+        box - shadow: var (--shadow - lg);
+    }
+    /* ======================================
+    Glow
+    ====================================== */
+    .team - card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity .35 s;
+        background: radial - gradient(
+            circle at top right,
+            rgba(59, 130, 246, .16),
+            transparent 60 %
+        );
+    }
+    .team - card: hover::before {
+        opacity: 1;
+    }
+    /* ======================================
+    Avatar
+    ====================================== */
+    .team - avatar {
+        width: 88 px;
+        height: 88 px;
+        margin - bottom: 22 px;
+        overflow: hidden;
+        border - radius: 50 % ;
+        border: 3 px solid
+        rgba(59, 130, 246, .22);
+    }
+    .team - avatar img {
+        width: 100 % ;
+        height: 100 % ;
+        object - fit: cover;
+    }
+    /* ======================================
+    Information
+    ====================================== */
+    .team - name {
+        color: var (--text - primary);
+        margin - bottom: 6 px;
+    }
+    .team - role {
+        color: var (--color - primary);
+        font - size: .9 rem;
+        font - weight: 600;
+    }
+    .team - bio {
+        margin - top: 18 px;
+        color: var (--text - secondary);
+        line - height: 1.8;
+    }
+    /* ======================================
+    Skills
+    ====================================== */
+    .team - skills {
+        display: flex;
+        flex - wrap: wrap;
+        gap: 10 px;
+        margin - top: 24 px;
+    }
+    .team - skill {
+        padding: 6 px 12 px;
+        border - radius: 999 px;
+        background: rgba(59, 130, 246, .10);
+        color: var (--color - primary);
+        font - size: .78 rem;
+        font - weight: 600;
+    }
+    /* ======================================
+    Footer
+    ====================================== */
+    .team - footer {
+        display: flex;
+        justify - content: space - between;
+        align - items: center;
+        margin - top: 28 px;
+        padding - top: 18 px;
+        border - top: 1 px solid
+        var (--border - color);
+    }
+    .team - links {
+        display: flex;
+        gap: 10 px;
+    }
+    .team - links a {
+        width: 38 px;
+        height: 38 px;
+        display: grid;
+        place - items: center;
+        border - radius: 10 px;
+        color: var (--text - secondary);
+        background: rgba(255, 255, 255, .05);
+        transition: all
+        var (--transition);
+    }
+    .team - links a: hover {
+        color: #fff;
+        background: linear - gradient(
+            135 deg,
+            var (--color - primary),
+            var (--color - secondary)
+        );
+    }
+    .team - status {
+        display: flex;
+        align - items: center;
+        gap: 8 px;
+        color: var (--text - muted);
+        font - size: .82 rem;
+    }
+    .team - status::before {
+        content: "";
+        width: 8 px;
+        height: 8 px;
+        border - radius: 50 % ;
+        background: #22C55E;
+
+    box-shadow:
+
+        0 0 10px # 22 C55E;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .team {
+        grid - template - columns: 1 fr;
+    }
+}

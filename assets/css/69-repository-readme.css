@@ -1,0 +1,156 @@
+/*
+==========================================
+MJT Project Design System
+Repository README
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Container
+====================================== */
+.repository - readme {
+        overflow: hidden;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+    }
+    /* ======================================
+    Header
+    ====================================== */
+    .repository - readme - header {
+        display: flex;
+        justify - content: space - between;
+        align - items: center;
+        gap: 24 px;
+        padding: 20 px 28 px;
+        border - bottom: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .03);
+    }
+    .repository - readme - title {
+        display: flex;
+        align - items: center;
+        gap: 12 px;
+        color: var (--text - primary);
+        font - weight: 700;
+    }
+    .repository - readme - actions {
+        display: flex;
+        gap: 12 px;
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .repository - readme - body {
+        padding: 42 px;
+    }
+    /* ======================================
+    Typography
+    ====================================== */
+    .repository - readme h1,
+    .repository - readme h2,
+    .repository - readme h3,
+    .repository - readme h4 {
+        margin: 32 px 0 18 px;
+        color: var (--text - primary);
+        line - height: 1.25;
+    }
+    .repository - readme h1: first - child {
+        margin - top: 0;
+    }
+    .repository - readme p {
+        margin: 16 px 0;
+        color: var (--text - secondary);
+        line - height: 1.95;
+    }
+    .repository - readme strong {
+        color: var (--text - primary);
+    }
+    .repository - readme a {
+        color: var (--color - primary);
+        text - decoration: none;
+    }
+    .repository - readme a: hover {
+        text - decoration: underline;
+    }
+    /* ======================================
+    Lists
+    ====================================== */
+    .repository - readme ul,
+    .repository - readme ol {
+        margin: 20 px 0;
+        padding - left: 28 px;
+        color: var (--text - secondary);
+    }
+    .repository - readme li {
+        margin: 10 px 0;
+        line - height: 1.8;
+    }
+    /* ======================================
+    Blockquote
+    ====================================== */
+    .repository - readme blockquote {
+        margin: 28 px 0;
+        padding: 18 px 24 px;
+        border - left: 4 px solid
+        var (--color - primary);
+        border - radius: 16 px;
+        background: rgba(59, 130, 246, .08);
+        color: var (--text - secondary);
+    }
+    /* ======================================
+    Image
+    ====================================== */
+    .repository - readme img {
+        display: block;
+        width: 100 % ;
+        margin: 28 px 0;
+        border - radius: 18 px;
+        border: 1 px solid
+        var (--border - color);
+    }
+    /* ======================================
+    Table
+    ====================================== */
+    .repository - readme table {
+        width: 100 % ;
+        margin: 28 px 0;
+        overflow: hidden;
+        border - collapse: collapse;
+        border - radius: 16 px;
+    }
+    .repository - readme th {
+        padding: 16 px 18 px;
+        text - align: left;
+        color: var (--text - primary);
+        background: rgba(255, 255, 255, .05);
+    }
+    .repository - readme td {
+        padding: 16 px 18 px;
+        color: var (--text - secondary);
+        border - top: 1 px solid
+        var (--border - color);
+    }
+    /* ======================================
+    Horizontal Rule
+    ====================================== */
+    .repository - readme hr {
+        margin: 40 px 0;
+        border: none;
+        border - top: 1 px solid
+        var (--border - color);
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .repository - readme - header {
+            flex - direction: column;
+            align - items: flex - start;
+        }
+        .repository - readme - body {
+            padding: 24 px;
+        }
+}

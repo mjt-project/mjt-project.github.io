@@ -1,0 +1,174 @@
+/*
+==========================================
+MJT Project Design System
+Print Styles
+Version : 1.0.0
+==========================================
+*/
+@media print {
+    /* ======================================
+    Base
+    ====================================== */
+    *{
+        color: #000 !important;
+
+    background:
+
+        transparent !important;
+
+    box-shadow:none !important;
+
+    text-shadow:none !important;
+
+}
+
+
+html,
+
+body{
+
+    width:100%;
+
+    min-height:auto;
+
+    font-size:12pt;
+
+    line-height:1.6;
+
+}
+
+
+/* = === === === === === === === === === === === === =
+            Links ===
+            ===
+            === === === === === === === === === === == * /
+        a {
+            color: #000 !important;
+
+    text-decoration:
+
+        underline;
+
+}
+
+a[href]::after{
+
+    content:
+
+        " (" attr(href) ")";
+
+    font-size:.85em;
+
+}
+
+
+/* = === === === === === === === === === === === === =
+                Hide UI ===
+                ===
+                === === === === === === === === === === == * /
+                .navbar,
+            .footer,
+            .back - to - top,
+            .notification - center,
+            .search - overlay,
+            .command - bar,
+            .project - toolbar,
+            .view -
+            switch,
+            button,
+            .btn {
+                display: none!important;
+            }
+            /* ======================================
+            Layout
+            ====================================== */
+            .container,
+            .section,
+            .page {
+                max - width: none!important;
+                padding: 0!important;
+                margin: 0!important;
+            }
+            /* ======================================
+            Cards
+            ====================================== */
+            .card,
+            .repository - card,
+            .project - panel,
+            .feature,
+            .stat - card {
+                border: 1 px solid #999 !important;
+
+    break-inside:
+
+        avoid;
+
+}
+
+
+/* = === === === === === === === === === === === === =
+                    Images ===
+                    ===
+                    === === === === === === === === === === == * /
+                img {
+                    max - width:
+                        100 % !important;
+                    page -
+                        break -inside:
+                            avoid;
+                }
+                /* ======================================
+                Typography
+                ====================================== */
+                h1,
+                h2,
+                h3,
+                h4 {
+                    page -
+                        break -after:
+                            avoid;
+                }
+                p,
+                li {
+                    orphans: 3;
+                    widows: 3;
+                }
+                /* ======================================
+                Code
+                ====================================== */
+                pre,
+                code {
+                    border: 1 px solid #999;
+
+    background:# fff!important;
+                    color: #000 !important;
+
+}
+
+
+/* = === === === === === === === === === === === === =
+                        Tables ===
+                        ===
+                        === === === === === === === === === === == * /
+                    table {
+                        border - collapse:
+                            collapse;
+                        width: 100 % ;
+                    }
+                    th,
+                    td {
+                        border: 1 px solid #999;
+
+    padding:8px;
+
+}
+
+
+/* = === === === === === === === === === === === === =
+                            Page ===
+                            ===
+                            === === === === === === === === === === == * /
+                        @page {
+                            margin: 2 cm;
+                        }
+                    }

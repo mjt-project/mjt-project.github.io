@@ -1,0 +1,160 @@
+/*
+==========================================
+MJT Project Design System
+Project Banner
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Banner
+====================================== */
+.project - banner {
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        grid - template - columns: 1.2 fr
+        .8 fr;
+        gap: 48 px;
+        align - items: center;
+        padding: 56 px;
+        border - radius: 32 px;
+        border: 1 px solid
+        var (--border - color);
+        background: linear - gradient(
+            135 deg,
+            rgba(59, 130, 246, .10),
+            rgba(34, 197, 94, .08),
+            rgba(255, 255, 255, .03)
+        );
+        backdrop - filter: blur(20 px);
+        box - shadow: var (--shadow - lg);
+    }
+    /* ======================================
+    Glow
+    ====================================== */
+    .project - banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial - gradient(
+            circle at top right,
+            rgba(59, 130, 246, .18),
+            transparent 45 %
+        ),
+        radial - gradient(
+            circle at bottom left,
+            rgba(34, 197, 94, .14),
+            transparent 42 %
+        );
+        pointer - events: none;
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .project - banner - content {
+        position: relative;
+        z - index: 2;
+    }
+    .project - banner - badge {
+        margin - bottom: 18 px;
+    }
+    .project - banner - title {
+        margin - bottom: 18 px;
+        color: var (--text - primary);
+        font - size:
+            clamp(
+                2.4 rem,
+                4 vw,
+                4 rem
+            );
+        line - height: 1.1;
+    }
+    .project - banner - description {
+        max - width: 620 px;
+        color: var (--text - secondary);
+        line - height: 1.9;
+        font - size: 1.05 rem;
+    }
+    /* ======================================
+    Buttons
+    ====================================== */
+    .project - banner - actions {
+        display: flex;
+        gap: 16 px;
+        flex - wrap: wrap;
+        margin - top: 36 px;
+    }
+    /* ======================================
+    Preview
+    ====================================== */
+    .project - banner - preview {
+        position: relative;
+        display: flex;
+        align - items: center;
+        justify - content: center;
+    }
+    /* ======================================
+    Mockup
+    ====================================== */
+    .project - banner - window {
+        width: 100 % ;
+        border - radius: 24 px;
+        overflow: hidden;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(15, 23, 42, .92);
+        backdrop - filter: blur(18 px);
+    }
+    .project - banner - window - header {
+        display: flex;
+        align - items: center;
+        gap: 10 px;
+        padding: 16 px 20 px;
+        border - bottom: 1 px solid
+        var (--border - color);
+    }
+    .project - banner - dot {
+        width: 11 px;
+        height: 11 px;
+        border - radius: 50 % ;
+    }
+    .project - banner - dot.red {
+        background: #FF5F57;
+    }
+    .project - banner - dot.yellow {
+        background: #FEBC2E;
+    }
+    .project - banner - dot.green {
+        background: #28C840;
+
+}
+
+.project-banner-window-body{
+
+    padding:26px;
+
+}
+
+/* = === === === === === === === === === === === === =
+            Animation ===
+            ===
+            === === === === === === === === === === == * /
+            .project - banner {
+                animation: float
+                10 s
+                ease - in - out
+                infinite;
+            }
+        /* ======================================
+        Responsive
+        ====================================== */
+        @media(max - width: 1024 px) {
+            .project - banner {
+                grid - template - columns: 1 fr;
+            }
+        }
+        @media(max - width: 768 px) {
+            .project - banner {
+                padding: 32 px 24 px;
+            }
+        }

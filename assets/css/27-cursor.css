@@ -1,0 +1,106 @@
+/*
+==========================================
+MJT Project Design System
+Custom Cursor
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Hide System Cursor
+====================================== */
+html.cursor - enabled,
+    html.cursor - enabled * {
+        cursor: none!important;
+    }
+    /* ======================================
+    Outer Cursor
+    ====================================== */
+    .cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 42 px;
+        height: 42 px;
+        margin - left: -21 px;
+        margin - top: -21 px;
+        border - radius: 50 % ;
+        border: 1.5 px solid rgba(59, 130, 246, .65);
+        background: rgba(59, 130, 246, .06);
+        backdrop - filter: blur(6 px);
+        pointer - events: none;
+        z - index: 99998;
+        transition: width .25 s,
+        height .25 s,
+        margin .25 s,
+        border - color .25 s,
+        background .25 s,
+        opacity .25 s;
+    }
+    /* ======================================
+    Inner Cursor
+    ====================================== */
+    .cursor - dot {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 8 px;
+        height: 8 px;
+        margin - left: -4 px;
+        margin - top: -4 px;
+        border - radius: 50 % ;
+        background: var (--color - primary);
+        box - shadow: 0 0 18 px rgba(59, 130, 246, .6);
+        pointer - events: none;
+        z - index: 99999;
+    }
+    /* ======================================
+    Hover
+    ====================================== */
+    .cursor.cursor - hover {
+        width: 70 px;
+        height: 70 px;
+        margin - left: -35 px;
+        margin - top: -35 px;
+        border - color: var (--color - primary);
+        background: rgba(59, 130, 246, .10);
+    }
+    /* ======================================
+    Click
+    ====================================== */
+    .cursor.cursor - active {
+        width: 28 px;
+        height: 28 px;
+        margin - left: -14 px;
+        margin - top: -14 px;
+    }
+    /* ======================================
+    Hidden
+    ====================================== */
+    .cursor - hidden {
+        opacity: 0;
+    }
+    /* ======================================
+    Blend Mode
+    ====================================== */
+    .cursor,
+    .cursor - dot {
+        mix - blend - mode: screen;
+    }
+/* ======================================
+Reduced Motion
+====================================== */
+@media(prefers - reduced - motion: reduce) {
+    .cursor,
+    .cursor - dot {
+        display: none;
+    }
+}
+/* ======================================
+Touch Devices
+====================================== */
+@media(pointer: coarse) {
+    .cursor,
+    .cursor - dot {
+        display: none!important;
+    }
+}

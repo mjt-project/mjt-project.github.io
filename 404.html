@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="noindex" name="robots"/>
+  <title>
+   404 • MJT Project
+  </title>
+  <link href="assets/css/01-tokens.css" rel="stylesheet"/>
+  <link href="assets/css/02-reset.css" rel="stylesheet"/>
+  <link href="assets/css/03-base.css" rel="stylesheet"/>
+  <link href="assets/css/04-typography.css" rel="stylesheet"/>
+  <link href="assets/css/05-layout.css" rel="stylesheet"/>
+  <link href="assets/css/07-buttons.css" rel="stylesheet"/>
+  <style>
+   .error-page {
+           min-height: 100 vh;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           text-align: center;
+       }
+       .error-box {
+           max-width: 720 px;
+       }
+       .error-code {
+           font-size: 8 rem;
+           line-height: 1;
+           font-weight: 800;
+           background: linear-gradient(
+               90 deg,
+               var (--color-primary),
+               var (--color-secondary)
+           ); 
+           -webkit-background-clip: text;
+           background-clip: text;
+           color: transparent;
+           margin-bottom: 24 px;
+       }
+       .error-box p {
+           margin-top: 20 px;
+           margin-bottom: 40 px;
+       }
+  </style>
+ </head>
+ <body>
+  <main class="error-page">
+   <div class="container">
+    <div class="error-box">
+     <div class="error-code">
+      404
+     </div>
+     <h1>
+      Không tìm thấy trang
+     </h1>
+     <p>
+      Trang bạn đang tìm kiếm không tồn tại hoặc đã được di chuyển.
+     </p>
+     <a class="btn btn-primary" href="/">
+      Quay về trang chủ
+     </a>
+    </div>
+   </div>
+  </main>
+ </body>
+</html>

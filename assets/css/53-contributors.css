@@ -1,0 +1,155 @@
+/*
+==========================================
+MJT Project Design System
+Contributors
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Grid
+====================================== */
+.contributors {
+    display: grid;
+    grid - template - columns: repeat(auto - fill, minmax(280 px, 1 fr));
+    gap: 24 px;
+}
+/* ======================================
+Card
+====================================== */
+.contributor {
+    position: relative;
+    overflow: hidden;
+    padding: 28 px;
+    border - radius: 24 px;
+    border: 1 px solid
+    var (--border - color);
+    background: rgba(255, 255, 255, .04);
+    backdrop - filter: blur(18 px);
+    transition: transform
+    var (--transition),
+    border - color
+    var (--transition),
+    box - shadow
+    var (--transition);
+}
+.contributor: hover {
+        transform: translateY(-8 px);
+        border - color: var (--border - hover);
+        box - shadow: var (--shadow - lg);
+    }
+    /* ======================================
+    Avatar
+    ====================================== */
+    .contributor - avatar {
+        width: 72 px;
+        height: 72 px;
+        border - radius: 50 % ;
+        overflow: hidden;
+        margin - bottom: 22 px;
+        border: 3 px solid rgba(59, 130, 246, .22);
+    }
+    .contributor - avatar img {
+        width: 100 % ;
+        height: 100 % ;
+        object - fit: cover;
+    }
+    /* ======================================
+    Info
+    ====================================== */
+    .contributor - name {
+        margin - bottom: 6 px;
+        color: var (--text - primary);
+    }
+    .contributor - role {
+        color: var (--color - primary);
+        font - size: .9 rem;
+        font - weight: 600;
+    }
+    .contributor - bio {
+        margin - top: 18 px;
+        color: var (--text - secondary);
+        line - height: 1.8;
+    }
+    /* ======================================
+    Statistics
+    ====================================== */
+    .contributor - stats {
+        display: flex;
+        gap: 24 px;
+        margin - top: 24 px;
+    }
+    .contributor - stat {
+        display: flex;
+        flex - direction: column;
+    }
+    .contributor - stat - value {
+        font - weight: 700;
+        color: var (--text - primary);
+    }
+    .contributor - stat - label {
+        color: var (--text - muted);
+        font - size: .8 rem;
+    }
+    /* ======================================
+    Footer
+    ====================================== */
+    .contributor - footer {
+        display: flex;
+        justify - content: space - between;
+        align - items: center;
+        margin - top: 26 px;
+        padding - top: 18 px;
+        border - top: 1 px solid
+        var (--border - color);
+    }
+    /* ======================================
+    Social
+    ====================================== */
+    .contributor - social {
+        display: flex;
+        gap: 10 px;
+    }
+    .contributor - social a {
+        width: 38 px;
+        height: 38 px;
+        display: grid;
+        place - items: center;
+        border - radius: 10 px;
+        background: rgba(255, 255, 255, .05);
+        color: var (--text - secondary);
+        transition: all
+        var (--transition);
+    }
+    .contributor - social a: hover {
+        color: #fff;
+        background: var (--color - primary);
+    }
+    /* ======================================
+    Status
+    ====================================== */
+    .contributor - status {
+        display: inline - flex;
+        align - items: center;
+        gap: 8 px;
+        color: var (--text - muted);
+        font - size: .82 rem;
+    }
+    .contributor - status::before {
+        content: "";
+        width: 8 px;
+        height: 8 px;
+        border - radius: 50 % ;
+        background: #22C55E;
+
+    box-shadow:
+
+        0 0 10px # 22 C55E;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .contributors {
+        grid - template - columns: 1 fr;
+    }
+}

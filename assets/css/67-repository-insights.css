@@ -1,0 +1,149 @@
+/*
+==========================================
+MJT Project Design System
+Repository Insights
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Container
+====================================== */
+.repository - insights {
+        display: grid;
+        grid - template - columns: repeat(2, minmax(0, 1 fr));
+        gap: 24 px;
+    }
+    /* ======================================
+    Card
+    ====================================== */
+    .repository - insight {
+        position: relative;
+        overflow: hidden;
+        padding: 28 px;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+        transition: transform
+        var (--transition),
+        border - color
+        var (--transition),
+        box - shadow
+        var (--transition);
+    }
+    .repository - insight: hover {
+        transform: translateY(-6 px);
+        border - color: var (--border - hover);
+        box - shadow: var (--shadow - lg);
+    }
+    /* ======================================
+    Glow
+    ====================================== */
+    .repository - insight::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        pointer - events: none;
+        transition: opacity .35 s;
+        background: radial - gradient(
+            circle at top right,
+            rgba(59, 130, 246, .18),
+            transparent 60 %
+        );
+    }
+    .repository - insight: hover::before {
+        opacity: 1;
+    }
+    /* ======================================
+    Header
+    ====================================== */
+    .repository - insight - header {
+        display: flex;
+        justify - content: space - between;
+        align - items: center;
+        margin - bottom: 22 px;
+    }
+    .repository - insight - title {
+        color: var (--text - primary);
+        font - weight: 700;
+    }
+    .repository - insight - icon {
+        width: 46 px;
+        height: 46 px;
+        display: grid;
+        place - items: center;
+        border - radius: 14 px;
+        color: var (--color - primary);
+        background: rgba(59, 130, 246, .12);
+    }
+    /* ======================================
+    Value
+    ====================================== */
+    .repository - insight - value {
+        font - size: 2.8 rem;
+        font - weight: 800;
+        color: var (--text - primary);
+        line - height: 1;
+    }
+    .repository - insight - label {
+        margin - top: 10 px;
+        color: var (--text - muted);
+    }
+    /* ======================================
+    Chart
+    ====================================== */
+    .repository - mini - chart {
+        display: flex;
+        align - items: flex - end;
+        gap: 6 px;
+        height: 72 px;
+        margin - top: 24 px;
+    }
+    .repository - mini - chart span {
+        flex: 1;
+        border - radius: 999 px 999 px 4 px 4 px;
+        background: linear - gradient(
+            180 deg,
+            var (--color - primary),
+            var (--color - secondary)
+        );
+        opacity: .9;
+        transition: transform .25 s ease;
+    }
+    .repository - mini - chart span: hover {
+        transform: scaleY(1.08);
+    }
+    /* ======================================
+    Footer
+    ====================================== */
+    .repository - insight - footer {
+        display: flex;
+        justify - content: space - between;
+        align - items: center;
+        margin - top: 22 px;
+        padding - top: 18 px;
+        border - top: 1 px solid
+        var (--border - color);
+    }
+    .repository - insight - trend {
+        display: flex;
+        align - items: center;
+        gap: 8 px;
+        color: var (--color - success);
+        font - size: .82 rem;
+        font - weight: 700;
+    }
+    .repository - insight - link {
+        color: var (--color - primary);
+        font - weight: 600;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 900 px) {
+    .repository - insights {
+        grid - template - columns: 1 fr;
+    }
+}

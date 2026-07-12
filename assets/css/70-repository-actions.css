@@ -1,0 +1,126 @@
+/*
+==========================================
+MJT Project Design System
+Repository Actions
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Container
+====================================== */
+.repository - actions {
+        display: flex;
+        align - items: center;
+        gap: 14 px;
+        flex - wrap: wrap;
+    }
+    /* ======================================
+    Button Base
+    ====================================== */
+    .repository - action {
+        display: inline - flex;
+        align - items: center;
+        justify - content: center;
+        gap: 10 px;
+        height: 46 px;
+        padding: 0 18 px;
+        border - radius: 14 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        color: var (--text - secondary);
+        font - weight: 600;
+        transition: transform
+        var (--transition),
+        background
+        var (--transition),
+        color
+        var (--transition),
+        border - color
+        var (--transition);
+    }
+    .repository - action: hover {
+        transform: translateY(-3 px);
+        color: var (--text - primary);
+        border - color: var (--border - hover);
+    }
+    /* ======================================
+    Icon
+    ====================================== */
+    .repository - action svg {
+        width: 18 px;
+        height: 18 px;
+    }
+    /* ======================================
+    Primary
+    ====================================== */
+    .repository - action.primary {
+        border - color:
+            transparent;
+        color: #fff;
+        background:
+            linear - gradient(
+                135 deg,
+                var (--color - primary),
+                var (--color - secondary)
+            );
+    }
+    .repository - action.primary: hover {
+        box - shadow:
+            0 12 px 30 px rgba(59, 130, 246, .25);
+    }
+    /* ======================================
+    Github
+    ====================================== */
+    .repository - action.github {
+        color: #fff;
+        background: rgba(255, 255, 255, .08);
+    }
+    /* ======================================
+    Star
+    ====================================== */
+    .repository - action.star.active {
+        color: #FBBF24;
+        border - color: rgba(251, 191, 36, .35);
+        background: rgba(251, 191, 36, .10);
+    }
+    /* ======================================
+    Fork
+    ====================================== */
+    .repository - action.fork {
+        color: var (--color - success);
+    }
+    /* ======================================
+    Danger
+    ====================================== */
+    .repository - action.danger {
+        color: var (--color - danger);
+    }
+    .repository - action.danger: hover {
+        background: rgba(239, 68, 68, .10);
+    }
+    /* ======================================
+    Counter
+    ====================================== */
+    .repository - action - count {
+        display: flex;
+        align - items: center;
+        gap: 6 px;
+        padding - left: 8 px;
+        margin - left: 4 px;
+        border - left: 1 px solid
+        var (--border - color);
+        font - size: .82 rem;
+        color: var (--text - muted);
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .repository - actions {
+            width: 100 % ;
+        }
+        .repository - action {
+            flex: 1;
+        }
+}

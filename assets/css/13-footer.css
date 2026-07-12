@@ -1,0 +1,188 @@
+/*
+==========================================
+MJT Project Design System
+Footer
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Footer
+====================================== */
+.footer {
+    position: relative;
+    margin - top: 160 px;
+    border - top: 1 px solid
+    var (--border - color);
+    background: linear - gradient(
+        180 deg,
+        rgba(255, 255, 255, .02),
+        rgba(255, 255, 255, .01)
+    );
+    overflow: hidden;
+}
+/* ======================================
+Background
+====================================== */
+.footer::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer - events: none;
+        background: radial - gradient(
+            circle at 15 % 20 % ,
+            rgba(59, 130, 246, .08),
+            transparent 35 %
+        ),
+        radial - gradient(
+            circle at 85 % 70 % ,
+            rgba(34, 197, 94, .08),
+            transparent 35 %
+        );
+    }
+    /* ======================================
+    Container
+    ====================================== */
+    .footer - container {
+        position: relative;
+        display: grid;
+        grid - template - columns: 2 fr
+        1 fr
+        1 fr
+        1 fr;
+        gap: 64 px;
+        padding: 96 px
+        0
+        48 px;
+    }
+    /* ======================================
+    Brand
+    ====================================== */
+    .footer - brand {
+        display: flex;
+        flex - direction: column;
+        gap: 20 px;
+    }
+    .footer - logo {
+        display: flex;
+        align - items: center;
+        gap: 16 px;
+    }
+    .footer - logo img {
+        width: 46 px;
+        height: 46 px;
+    }
+    .footer - logo h3 {
+        font - size: 1.4 rem;
+    }
+    .footer - description {
+        max - width: 420 px;
+        color: var (--text - secondary);
+        line - height: 1.8;
+    }
+    /* ======================================
+    Links
+    ====================================== */
+    .footer - column {
+        display: flex;
+        flex - direction: column;
+        gap: 20 px;
+    }
+    .footer - title {
+        font - size: 1 rem;
+        font - weight: 700;
+        color: var (--text - primary);
+    }
+    .footer - links {
+        display: flex;
+        flex - direction: column;
+        gap: 12 px;
+    }
+    .footer - links a {
+        color: var (--text - muted);
+        transition: color
+        var (--transition),
+        transform
+        var (--transition);
+    }
+    .footer - links a: hover {
+        color: var (--text - primary);
+        transform: translateX(6 px);
+    }
+    /* ======================================
+    Social
+    ====================================== */
+    .footer - social {
+        display: flex;
+        gap: 12 px;
+        margin - top: 8 px;
+    }
+    .footer - social a {
+        width: 42 px;
+        height: 42 px;
+        display: grid;
+        place - items: center;
+        border - radius: 50 % ;
+        color: var (--text - secondary);
+        background: rgba(255, 255, 255, .04);
+        border: 1 px solid
+        var (--border - color);
+        transition: all
+        var (--transition);
+    }
+    .footer - social a: hover {
+        color: white;
+        border - color: var (--border - hover);
+        transform: translateY(-4 px);
+        box - shadow: var (--shadow - md);
+    }
+    /* ======================================
+    Bottom
+    ====================================== */
+    .footer - bottom {
+        display: flex;
+        align - items: center;
+        justify - content: space - between;
+        gap: 24 px;
+        padding: 28 px
+        0;
+        border - top: 1 px solid
+        var (--border - color);
+    }
+    .footer - copy {
+        color: var (--text - muted);
+        font - size: .9 rem;
+    }
+    .footer - bottom - links {
+        display: flex;
+        gap: 24 px;
+    }
+    .footer - bottom - links a {
+        color: var (--text - muted);
+        font - size: .9 rem;
+    }
+    .footer - bottom - links a: hover {
+        color: var (--text - primary);
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 1100 px) {
+    .footer - container {
+        grid - template - columns:
+            repeat(2, 1 fr);
+    }
+}
+@media(max - width: 768 px) {
+    .footer - container {
+            grid - template - columns: 1 fr;
+            gap: 48 px;
+        }
+        .footer - bottom {
+            flex - direction: column;
+            align - items: flex - start;
+        }
+        .footer - bottom - links {
+            flex - wrap: wrap;
+            gap: 16 px;
+        }
+}

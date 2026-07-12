@@ -1,0 +1,132 @@
+/*
+==========================================
+MJT Project Design System
+Project View
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Grid View
+====================================== */
+.repository - grid.view - grid {
+        display: grid;
+        grid - template - columns: repeat(2, minmax(0, 1 fr));
+        gap: 28 px;
+    }
+    /* ======================================
+    List View
+    ====================================== */
+    .repository - grid.view - list {
+        display: flex;
+        flex - direction: column;
+        gap: 22 px;
+    }
+    .repository - grid.view - list
+    .repository - card {
+        display: grid;
+        grid - template - columns: 88 px
+        1 fr
+        auto;
+        align - items: center;
+        gap: 24 px;
+    }
+    .repository - grid.view - list
+    .repository - card - header {
+        margin: 0;
+    }
+    .repository - grid.view - list
+    .repository - card - description {
+        margin - top: 8 px;
+    }
+    .repository - grid.view - list
+    .repository - card - footer {
+        border: none;
+        padding: 0;
+    }
+    /* ======================================
+    Compact View
+    ====================================== */
+    .repository - grid.view - compact {
+        display: flex;
+        flex - direction: column;
+        gap: 12 px;
+    }
+    .repository - grid.view - compact
+    .repository - card {
+        padding: 18 px 22 px;
+        border - radius: 18 px;
+    }
+    .repository - grid.view - compact
+    .repository - card - description,
+    .repository - grid.view - compact
+    .repository - card - topics {
+        display: none;
+    }
+    .repository - grid.view - compact
+    .repository - card - header {
+        gap: 14 px;
+    }
+    .repository - grid.view - compact
+    .repository - card - icon {
+        width: 46 px;
+        height: 46 px;
+    }
+    .repository - grid.view - compact
+    .repository - card - footer {
+        margin - top: 0;
+        padding - top: 14 px;
+    }
+    /* ======================================
+    View Switcher
+    ====================================== */
+    .view -
+    switch {
+        display: flex;
+        align - items: center;
+        gap: 8 px;
+        padding: 6 px;
+        border - radius: 14 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+    }
+    .view - button {
+        width: 42 px;
+        height: 42 px;
+        display: grid;
+        place - items: center;
+        border - radius: 10 px;
+        color: var (--text - secondary);
+        transition: all
+        var (--transition);
+    }
+    .view - button: hover {
+        background: rgba(255, 255, 255, .06);
+    }
+    .view - button.active {
+        color: #fff;
+        background: linear - gradient(
+            135 deg,
+            var (--color - primary),
+            var (--color - secondary)
+        );
+        box - shadow: var (--shadow - glow);
+    }
+    .view - button svg {
+        width: 18 px;
+        height: 18 px;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 1024 px) {
+    .repository - grid.view - grid {
+        grid - template - columns: 1 fr;
+    }
+}
+@media(max - width: 768 px) {
+    .repository - grid.view - list
+        .repository - card {
+            grid - template - columns: 1 fr;
+        }
+}

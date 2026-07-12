@@ -1,0 +1,165 @@
+/*
+==========================================
+MJT Project Design System
+Command Palette
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Overlay
+====================================== */
+.command - palette {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align - items: flex - start;
+        justify - content: center;
+        padding - top: 10 vh;
+        background: rgba(0, 0, 0, .45);
+        backdrop - filter: blur(12 px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity
+        var (--transition),
+        visibility
+        var (--transition);
+        z - index: 99999;
+    }
+    .command - palette.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    /* ======================================
+    Window
+    ====================================== */
+    .command - window {
+        width: min(720 px, 92 vw);
+        overflow: hidden;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(17, 24, 39, .96);
+        backdrop - filter: blur(24 px);
+        box - shadow: var (--shadow - lg);
+    }
+    /* ======================================
+    Search
+    ====================================== */
+    .command - search {
+        display: flex;
+        align - items: center;
+        gap: 16 px;
+        padding: 22 px 24 px;
+        border - bottom: 1 px solid
+        var (--border - color);
+    }
+    .command - search svg {
+        width: 22 px;
+        height: 22 px;
+        color: var (--text - muted);
+        flex - shrink: 0;
+    }
+    .command - search input {
+        flex: 1;
+        font - size: 1 rem;
+        color: var (--text - primary);
+    }
+    .command - search input::placeholder {
+        color: var (--text - muted);
+    }
+    /* ======================================
+    List
+    ====================================== */
+    .command - results {
+        display: flex;
+        flex - direction: column;
+        max - height: 420 px;
+        overflow - y: auto;
+    }
+    /* ======================================
+    Item
+    ====================================== */
+    .command - item {
+        display: flex;
+        align - items: center;
+        justify - content: space - between;
+        gap: 20 px;
+        width: 100 % ;
+        padding: 18 px 24 px;
+        text - align: left;
+        color: var (--text - secondary);
+        transition: background
+        var (--transition),
+        color
+        var (--transition);
+    }
+    .command - item: hover,
+    .command - item: focus {
+        background: rgba(59, 130, 246, .08);
+        color: var (--text - primary);
+    }
+    .command - item - title {
+        font - weight: 600;
+    }
+    .command - item - description {
+        font - size: .85 rem;
+        color: var (--text - muted);
+    }
+    /* ======================================
+    Shortcut
+    ====================================== */
+    .command - shortcut {
+        padding: 4 px 10 px;
+        border - radius: 8 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        color: var (--text - muted);
+        font - size: .75 rem;
+        font - weight: 600;
+    }
+    /* ======================================
+    Empty
+    ====================================== */
+    .command - empty {
+        padding: 48 px;
+        text - align: center;
+        color: var (--text - muted);
+    }
+    /* ======================================
+    Footer
+    ====================================== */
+    .command - footer {
+        display: flex;
+        justify - content: space - between;
+        align - items: center;
+        padding: 16 px 24 px;
+        border - top: 1 px solid
+        var (--border - color);
+        color: var (--text - muted);
+        font - size: .82 rem;
+    }
+    /* ======================================
+    Scrollbar
+    ====================================== */
+    .command - results::-webkit - scrollbar {
+        width: 10 px;
+    }
+    .command - results::-webkit - scrollbar - thumb {
+        background: rgba(255, 255, 255, .10);
+        border - radius: 999 px;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .command - palette {
+            padding - top: 0;
+            align - items: flex - start;
+        }
+        .command - window {
+            width: 100 % ;
+            height: 100 vh;
+            border - radius: 0;
+        }
+}

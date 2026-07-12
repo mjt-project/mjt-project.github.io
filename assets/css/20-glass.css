@@ -1,0 +1,168 @@
+/*
+==========================================
+MJT Project Design System
+Glass Morphism
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Glass Base
+====================================== */
+.glass {
+    position: relative;
+    background: rgba(255, 255, 255, .05);
+    border: 1 px solid rgba(255, 255, 255, .08);
+    backdrop - filter: blur(18 px); -
+    webkit - backdrop - filter: blur(18 px);
+    overflow: hidden;
+}
+/* ======================================
+Highlight
+====================================== */
+.glass::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer - events: none;
+        background: linear - gradient(
+            135 deg,
+            rgba(255, 255, 255, .12),
+            transparent 35 %
+        );
+    }
+    /* ======================================
+    Border Glow
+    ====================================== */
+    .glass::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border - radius: inherit;
+        border: 1 px solid transparent;
+        background: linear - gradient(
+            135 deg,
+            rgba(59, 130, 246, .22),
+            rgba(34, 197, 94, .12),
+            transparent
+        )
+        border - box; -
+        webkit - mask: linear - gradient(#fff 0 0) padding - box,
+        linear - gradient(#fff 0 0); -
+        webkit - mask - composite: xor;
+        mask - composite: exclude;
+        opacity: 0;
+        transition: opacity
+        var (--transition);
+    }
+    /* ======================================
+    Hover
+    ====================================== */
+    .glass: hover {
+        border - color:
+            rgba(255, 255, 255, .14);
+    }
+    .glass: hover::after {
+        opacity: 1;
+    }
+    /* ======================================
+    Glass Card
+    ====================================== */
+    .glass - card {
+        border - radius: var (--radius - xl);
+        box - shadow:
+            var (--shadow - lg);
+    }
+    /* ======================================
+    Glass Navbar
+    ====================================== */
+    .glass - navbar {
+        background: rgba(9, 9, 11, .72);
+        backdrop - filter: blur(22 px);
+    }
+    /* ======================================
+    Glass Panel
+    ====================================== */
+    .glass - panel {
+        padding: 32 px;
+        border - radius: 24 px;
+    }
+    /* ======================================
+    Glass Hero
+    ====================================== */
+    .glass - hero {
+        background: linear - gradient(
+            180 deg,
+            rgba(255, 255, 255, .06),
+            rgba(255, 255, 255, .03)
+        );
+    }
+    /* ======================================
+    Glass Repository
+    ====================================== */
+    .glass - repository {
+        background: linear - gradient(
+            180 deg,
+            rgba(59, 130, 246, .06),
+            rgba(255, 255, 255, .03)
+        );
+    }
+    /* ======================================
+    Glass Button
+    ====================================== */
+    .glass - button {
+        background: rgba(255, 255, 255, .06);
+    }
+    /* ======================================
+    Glass Sidebar
+    ====================================== */
+    .glass - sidebar {
+        background: rgba(15, 23, 42, .82);
+    }
+    /* ======================================
+    Glass Blur Levels
+    ====================================== */
+    .blur - sm {
+        backdrop - filter:
+            blur(8 px);
+    }
+    .blur - md {
+        backdrop - filter:
+            blur(16 px);
+    }
+    .blur - lg {
+        backdrop - filter:
+            blur(28 px);
+    }
+    .blur - xl {
+        backdrop - filter:
+            blur(40 px);
+    }
+    /* ======================================
+    Noise Overlay
+    ====================================== */
+    .glass - noise {
+        position: relative;
+    }
+    .glass - noise::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer - events: none;
+        opacity: .04;
+        mix - blend - mode: soft - light;
+        background - image: radial - gradient(
+            circle,
+            rgba(255, 255, 255, .65) 1 px,
+            transparent 1 px
+        );
+        background - size: 10 px 10 px;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .glass {
+        backdrop - filter:
+            blur(12 px);
+    }
+}

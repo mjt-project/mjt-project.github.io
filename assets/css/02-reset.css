@@ -1,0 +1,117 @@
+/*
+==========================================
+MJT Project Design System
+Reset CSS
+Version : 1.0.0
+==========================================
+*/
+/*----------Box Model----------*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/*----------Root----------*/
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+/*----------Body----------*/
+body {
+    margin: 0;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*----------Typography----------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure {
+    margin: 0;
+}
+/*----------Lists----------*/
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*----------Anchor----------*/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/*----------Image----------*/
+img,
+picture,
+svg,
+canvas,
+video {
+    display: block;
+    max-width: 100%;
+}
+/*----------Form----------*/
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+/*----------Button----------*/
+button {
+    cursor: pointer;
+}
+/*----------Input----------*/
+input::-ms-clear {
+    display: none;
+}
+input::-webkit-search-decoration,
+    input::-webkit-search-cancel-button {
+        display: none;
+    }
+/*----------Table----------*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*----------HR----------*/
+hr {
+    margin: 0;
+    border: none;
+}
+/*----------Dialog----------*/
+dialog {
+    padding: 0;
+    border: none;
+}
+/*----------Text Selection----------*/
+::selection {
+    background: rgba(59, 130, 246, .35);
+    color: white;
+}
+/*----------Focus----------*/
+:focus-visible {
+        outline: 2 px solid
+        var (--color-primary);
+        outline-offset: 4 px;
+    }
+    /*----------Disabled----------*/
+    :disabled {
+        cursor: not-allowed;
+    }
+/*----------Hidden----------*/
+[hidden] {
+    display: none!important;
+}

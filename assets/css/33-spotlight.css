@@ -1,0 +1,116 @@
+/*
+==========================================
+MJT Project Design System
+Spotlight Effect
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Supported Components
+====================================== */
+.card,
+.repository,
+.glass - card {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+    }
+    /* ======================================
+    Spotlight Layer
+    ====================================== */
+    .card::before,
+    .repository::before,
+    .glass - card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer - events: none;
+        opacity: 0;
+        transition: opacity .28 s ease;
+        background: radial - gradient(
+            520 px circle at
+            var (--spotlight - x, 50 % ) var (--spotlight - y, 50 % ),
+            rgba(255, 255, 255, .16),
+            rgba(59, 130, 246, .10) 24 % ,
+            rgba(34, 197, 94, .05) 42 % ,
+            transparent 72 %
+        );
+    }
+    /* ======================================
+    Active
+    ====================================== */
+    .card.spotlight::before,
+    .repository.spotlight::before,
+    .glass - card.spotlight::before {
+        opacity: 1;
+    }
+    /* ======================================
+    Border Glow
+    ====================================== */
+    .card::after,
+    .repository::after,
+    .glass - card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer - events: none;
+        border - radius: inherit;
+        opacity: 0;
+        transition: opacity .25 s ease;
+        box - shadow: inset 0 0 0 1 px rgba(59, 130, 246, .28),
+        0 0 30 px rgba(59, 130, 246, .08);
+    }
+    .card.spotlight::after,
+    .repository.spotlight::after,
+    .glass - card.spotlight::after {
+        opacity: 1;
+    }
+    /* ======================================
+    Hover
+    ====================================== */
+    .card.spotlight,
+    .repository.spotlight,
+    .glass - card.spotlight {
+        transform: translateY(-4 px);
+    }
+/* ======================================
+Dark Theme
+====================================== */
+[data - theme = "dark"].card::before,
+    [data - theme = "dark"].repository::before,
+    [data - theme = "dark"].glass - card::before {
+        background: radial - gradient(
+            560 px circle at
+            var (--spotlight - x) var (--spotlight - y),
+            rgba(59, 130, 246, .20),
+            rgba(34, 197, 94, .08) 35 % ,
+            transparent 72 %
+        );
+    }
+/* ======================================
+Light Theme
+====================================== */
+[data - theme = "light"].card::before,
+    [data - theme = "light"].repository::before,
+    [data - theme = "light"].glass - card::before {
+        background: radial - gradient(
+            520 px circle at
+            var (--spotlight - x) var (--spotlight - y),
+            rgba(59, 130, 246, .10),
+            rgba(255, 255, 255, .45) 28 % ,
+            transparent 72 %
+        );
+    }
+/* ======================================
+Reduced Motion
+====================================== */
+@media(prefers - reduced - motion: reduce) {
+    .card::before,
+        .repository::before,
+        .glass - card::before,
+        .card::after,
+        .repository::after,
+        .glass - card::after {
+            display: none;
+        }
+}

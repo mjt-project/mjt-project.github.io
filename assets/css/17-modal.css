@@ -1,0 +1,170 @@
+/*
+==========================================
+MJT Project Design System
+Modal
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Overlay
+====================================== */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align - items: center;
+    justify - content: center;
+    padding: 32 px;
+    background: rgba(0, 0, 0, .55);
+    backdrop - filter: blur(12 px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity
+    var (--transition),
+    visibility
+    var (--transition);
+    z - index: var (--z - modal);
+}
+.modal.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    /* ======================================
+    Container
+    ====================================== */
+    .modal - dialog {
+        position: relative;
+        width: min(100 % , 720 px);
+        max - height: 90 vh;
+        overflow: hidden;
+        border - radius: var (--radius - xl);
+        border: 1 px solid
+        var (--border - color);
+        background: linear - gradient(
+            180 deg,
+            rgba(30, 41, 59, .98),
+            rgba(15, 23, 42, .98)
+        );
+        backdrop - filter: blur(24 px);
+        box - shadow: var (--shadow - lg);
+        transform: translateY(40 px)
+        scale(.96);
+        transition: transform .35 s ease;
+    }
+    .modal.active.modal - dialog {
+        transform: translateY(0)
+        scale(1);
+    }
+    /* ======================================
+    Header
+    ====================================== */
+    .modal - header {
+        display: flex;
+        align - items: center;
+        justify - content: space - between;
+        gap: 20 px;
+        padding: 28 px 32 px;
+        border - bottom: 1 px solid
+        var (--border - color);
+    }
+    .modal - title {
+        font - size: 1.35 rem;
+        font - weight: 700;
+        color: var (--text - primary);
+    }
+    /* ======================================
+    Close
+    ====================================== */
+    .modal - close {
+        width: 42 px;
+        height: 42 px;
+        display: grid;
+        place - items: center;
+        border - radius: 50 % ;
+        background: rgba(255, 255, 255, .04);
+        color: var (--text - secondary);
+        transition: background
+        var (--transition),
+        color
+        var (--transition),
+        transform
+        var (--transition);
+    }
+    .modal - close: hover {
+        color: #fff;
+        background: rgba(255, 255, 255, .08);
+        transform: rotate(90 deg);
+    }
+    /* ======================================
+    Body
+    ====================================== */
+    .modal - body {
+        padding: 32 px;
+        overflow - y: auto;
+        max - height: 60 vh;
+        color: var (--text - secondary);
+    }
+    /* ======================================
+    Footer
+    ====================================== */
+    .modal - footer {
+        display: flex;
+        justify - content: flex - end;
+        gap: 16 px;
+        padding: 24 px 32 px;
+        border - top: 1 px solid
+        var (--border - color);
+    }
+    /* ======================================
+    Sizes
+    ====================================== */
+    .modal - sm.modal - dialog {
+        max - width: 480 px;
+    }
+    .modal - lg.modal - dialog {
+        max - width: 960 px;
+    }
+    .modal - xl.modal - dialog {
+        max - width: 1200 px;
+    }
+    .modal - full.modal - dialog {
+        width: 100 % ;
+        height: 100 % ;
+        max - width: none;
+        max - height: none;
+        border - radius: 0;
+    }
+    /* ======================================
+    Scrollable
+    ====================================== */
+    .modal - body::-webkit - scrollbar {
+        width: 10 px;
+    }
+    .modal - body::-webkit - scrollbar - thumb {
+        background: rgba(255, 255, 255, .12);
+        border - radius: 999 px;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .modal {
+        padding: 16 px;
+    }
+    .modal - dialog {
+            width: 100 % ;
+        }
+        .modal - header {
+            padding: 20 px 24 px;
+        }
+        .modal - body {
+            padding: 24 px;
+        }
+        .modal - footer {
+            padding: 20 px 24 px;
+            flex - direction: column;
+        }
+        .modal - footer.btn {
+            width: 100 % ;
+        }
+}

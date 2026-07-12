@@ -1,0 +1,153 @@
+/*
+==========================================
+MJT Project Design System
+License
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Layout
+====================================== */
+.license {
+    display: grid;
+    grid - template - columns: 340 px
+    minmax(0, 1 fr);
+    gap: 40 px;
+    align - items: start;
+}
+/* ======================================
+Sidebar
+====================================== */
+.license - sidebar {
+        position: sticky;
+        top: 110 px;
+        display: flex;
+        flex - direction: column;
+        gap: 22 px;
+    }
+    .license - card {
+        padding: 28 px;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+    }
+    .license - card h3 {
+        margin - bottom: 18 px;
+        color: var (--text - primary);
+    }
+    .license - card p {
+        color: var (--text - secondary);
+        line - height: 1.8;
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .license - content {
+        display: flex;
+        flex - direction: column;
+        gap: 28 px;
+    }
+    .license - section {
+        padding: 34 px;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+    }
+    .license - section h2 {
+        margin - bottom: 20 px;
+        color: var (--text - primary);
+    }
+    .license - section p {
+        margin - bottom: 16 px;
+        color: var (--text - secondary);
+        line - height: 1.9;
+    }
+    /* ======================================
+    Code
+    ====================================== */
+    .license - code {
+        overflow: auto;
+        margin - top: 24 px;
+        padding: 28 px;
+        border - radius: 18 px;
+        background: #0B1220;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    font-family:
+
+        "JetBrains Mono",
+
+        monospace;
+
+    color:# E2E8F0;
+        line - height: 1.8;
+    }
+    /* ======================================
+    Permissions
+    ====================================== */
+    .license - grid {
+        display: grid;
+        grid - template - columns: repeat(3, 1 fr);
+        gap: 20 px;
+        margin - top: 28 px;
+    }
+    .license - item {
+        padding: 22 px;
+        border - radius: 18 px;
+        background: rgba(255, 255, 255, .03);
+    }
+    .license - item h4 {
+        margin - bottom: 12 px;
+        color: var (--text - primary);
+    }
+    .license - item p {
+        color: var (--text - secondary);
+        line - height: 1.7;
+    }
+    .license - allow {
+        border - left:
+            4 px solid
+        var (--color - success);
+    }
+    .license - limit {
+        border - left:
+            4 px solid
+        var (--color - warning);
+    }
+    .license - condition {
+        border - left:
+            4 px solid
+        var (--color - primary);
+    }
+    /* ======================================
+    Footer
+    ====================================== */
+    .license - footer {
+        display: flex;
+        justify - content: space - between;
+        align - items: center;
+        margin - top: 36 px;
+        padding - top: 24 px;
+        border - top: 1 px solid
+        var (--border - color);
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 1100 px) {
+    .license {
+        grid - template - columns: 1 fr;
+    }
+    .license - sidebar {
+            position: relative;
+            top: auto;
+        }
+        .license - grid {
+            grid - template - columns: 1 fr;
+        }
+}

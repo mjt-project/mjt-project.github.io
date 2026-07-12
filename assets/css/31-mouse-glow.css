@@ -1,0 +1,81 @@
+/*
+==========================================
+MJT Project Design System
+Mouse Glow
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Mouse Glow
+====================================== */
+.mouse - glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 720 px;
+    height: 720 px;
+    margin - left: -360 px;
+    margin - top: -360 px;
+    pointer - events: none;
+    z - index: -1;
+    border - radius: 50 % ;
+    opacity: .65;
+    filter: blur(70 px);
+    background: radial - gradient(
+        circle,
+        rgba(59, 130, 246, .22) 0 % ,
+        rgba(34, 197, 94, .10) 35 % ,
+        rgba(139, 92, 246, .08) 55 % ,
+        transparent 75 %
+    );
+    transition: opacity .35 s ease;
+}
+/* ======================================
+Interactive
+====================================== */
+body: hover.mouse - glow {
+    opacity: .75;
+}
+body: active.mouse - glow {
+    opacity: .95;
+}
+/* ======================================
+Dark Theme
+====================================== */
+[data - theme = "dark"].mouse - glow {
+    background: radial - gradient(
+        circle,
+        rgba(59, 130, 246, .20) 0 % ,
+        rgba(34, 197, 94, .12) 40 % ,
+        rgba(168, 85, 247, .08) 60 % ,
+        transparent 78 %
+    );
+}
+/* ======================================
+Light Theme
+====================================== */
+[data - theme = "light"].mouse - glow {
+    opacity: .45;
+    background: radial - gradient(
+        circle,
+        rgba(59, 130, 246, .14) 0 % ,
+        rgba(34, 197, 94, .08) 40 % ,
+        rgba(255, 255, 255, 0) 75 %
+    );
+}
+/* ======================================
+Reduced Motion
+====================================== */
+@media(prefers - reduced - motion: reduce) {
+    .mouse - glow {
+        display: none;
+    }
+}
+/* ======================================
+Touch Devices
+====================================== */
+@media(pointer: coarse) {
+    .mouse - glow {
+        display: none;
+    }
+}

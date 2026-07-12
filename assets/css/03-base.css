@@ -1,0 +1,162 @@
+/*
+==========================================
+MJT Project Design System
+Base CSS
+Version : 1.0.0
+==========================================
+*/
+@import url("./01-tokens.css");
+@import url("./02-reset.css");
+/*======================================
+Google Font
+======================================*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+/*======================================
+HTML
+======================================*/
+html {
+    font-size: 16 px;
+}
+/*======================================
+BODY
+======================================*/
+body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: var (--bg-page);
+    color: var (--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+/*======================================
+Background
+======================================*/
+body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -10;
+        background: radial-gradient(circle at 20 % 20 % ,
+            rgba(59, 130, 246, .18),
+            transparent 30 % ),
+        radial-gradient(circle at 80 % 25 % ,
+            rgba(34, 197, 94, .12),
+            transparent 30 % ),
+        radial-gradient(circle at 60 % 85 % ,
+            rgba(139, 92, 246, .12),
+            transparent 35 % ),
+        linear-gradient(
+            180 deg,
+            #050816,
+        # 09090 B 35 % ,
+            #111827 100%
+        );
+}
+
+
+/*= === === === === === === === === === === === === =
+            Grid Overlay ===
+            ===
+            === === === === === === === === === === == * /
+            body::after {
+                content: "";
+                position: fixed;
+                inset: 0;
+                z-index: -9;
+                opacity: .06;
+                background-image: linear-gradient(
+                    rgba(255, 255, 255, .08) 1 px,
+                    transparent 1 px
+                ),
+                linear-gradient(
+                    90 deg,
+                    rgba(255, 255, 255, .08) 1 px,
+                    transparent 1 px
+                );
+                background-size: 48 px 48 px;
+            }
+            /*======================================
+            Container
+            ======================================*/
+            .container {
+                width: min(
+                    100 % -48 px,
+                    var (--container-width)
+                );
+                margin-inline: auto;
+            }
+            /*======================================
+            Section
+            ======================================*/
+            section {
+                padding: var (--space-9)
+                0;
+            }
+            /*======================================
+            Links
+            ======================================*/
+            a {
+                transition: color
+                var (--transition),
+                opacity
+                var (--transition);
+            }
+            /*======================================
+            Images
+            ======================================*/
+            img {
+                user-select: none;
+            }
+            /*======================================
+            Scrollbar
+            ======================================*/
+            ::-webkit-scrollbar {
+                width: 11 px;
+            }::-webkit-scrollbar-track {
+                background: #09090B;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:# 334155;
+                border-radius: 999 px;
+            }::-webkit-scrollbar-thumb: hover {
+                background: #475569;
+
+}
+
+
+/*= === === === === === === === === === === === === =
+                    Selection ===
+                    ===
+                    === === === === === === === === === === == * /::selection {
+                background: rgba(59, 130, 246, .4);
+            }
+            /*======================================
+            Glass
+            ======================================*/
+            .glass {
+                background: rgba(255, 255, 255, .04);
+                backdrop-filter: blur(18 px);
+                border: 1 px solid
+                var (--border-color);
+            }
+            /*======================================
+            Utility
+            ======================================*/
+            .hidden {
+                display: none!important;
+            }
+            .text-center {
+                text-align: center;
+            }
+            .flex {
+                display: flex;
+            }
+            .grid {
+                display: grid;
+            }
+            .w-full {
+                width: 100 % ;
+            }

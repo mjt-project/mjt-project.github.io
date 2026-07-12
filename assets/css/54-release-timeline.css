@@ -1,0 +1,165 @@
+/*
+==========================================
+MJT Project Design System
+Release Timeline
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Container
+====================================== */
+.release - timeline {
+        position: relative;
+        display: flex;
+        flex - direction: column;
+        gap: 28 px;
+        padding - left: 38 px;
+    }
+    .release - timeline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 12 px;
+        width: 2 px;
+        background: linear - gradient(
+            to bottom,
+            var (--color - primary),
+            rgba(59, 130, 246, .18)
+        );
+    }
+    /* ======================================
+    Item
+    ====================================== */
+    .release {
+        position: relative;
+        padding: 28 px;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+        transition: transform
+        var (--transition),
+        border - color
+        var (--transition),
+        box - shadow
+        var (--transition);
+    }
+    .release: hover {
+        transform: translateY(-6 px);
+        border - color: var (--border - hover);
+        box - shadow: var (--shadow - lg);
+    }
+    /* ======================================
+    Point
+    ====================================== */
+    .release::before {
+        content: "";
+        position: absolute;
+        left: -34 px;
+        top: 34 px;
+        width: 18 px;
+        height: 18 px;
+        border - radius: 50 % ;
+        background: linear - gradient(
+            135 deg,
+            var (--color - primary),
+            var (--color - secondary)
+        );
+        box - shadow: 0 0 18 px rgba(59, 130, 246, .35);
+    }
+    /* ======================================
+    Header
+    ====================================== */
+    .release - header {
+        display: flex;
+        justify - content: space - between;
+        align - items: flex - start;
+        gap: 20 px;
+        margin - bottom: 18 px;
+    }
+    .release - version {
+        display: flex;
+        align - items: center;
+        gap: 12 px;
+    }
+    .release - version h3 {
+        margin: 0;
+        color: var (--text - primary);
+    }
+    .release - date {
+        color: var (--text - muted);
+        font - size: .9 rem;
+    }
+    /* ======================================
+    Badge
+    ====================================== */
+    .release - tag {
+        padding: 6 px 12 px;
+        border - radius: 999 px;
+        background: rgba(59, 130, 246, .12);
+        color: var (--color - primary);
+        font - size: .78 rem;
+        font - weight: 700;
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .release - description {
+        color: var (--text - secondary);
+        line - height: 1.8;
+    }
+    /* ======================================
+    Changes
+    ====================================== */
+    .release - changes {
+        display: grid;
+        grid - template - columns: repeat(2, minmax(0, 1 fr));
+        gap: 18 px;
+        margin - top: 24 px;
+    }
+    .release - change {
+        display: flex;
+        gap: 12 px;
+    }
+    .release - change svg {
+        width: 18 px;
+        height: 18 px;
+        color: var (--color - success);
+        flex - shrink: 0;
+        margin - top: 3 px;
+    }
+    .release - change p {
+        color: var (--text - secondary);
+        line - height: 1.7;
+    }
+    /* ======================================
+    Footer
+    ====================================== */
+    .release - footer {
+        display: flex;
+        align - items: center;
+        justify - content: space - between;
+        margin - top: 24 px;
+        padding - top: 20 px;
+        border - top: 1 px solid
+        var (--border - color);
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .release - timeline {
+            padding - left: 24 px;
+        }
+        .release::before {
+            left: -21 px;
+        }
+        .release - header {
+            flex - direction: column;
+        }
+        .release - changes {
+            grid - template - columns: 1 fr;
+        }
+}

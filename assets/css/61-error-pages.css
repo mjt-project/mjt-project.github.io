@@ -1,0 +1,158 @@
+/*
+==========================================
+MJT Project Design System
+Error Pages
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Layout
+====================================== */
+.error - page {
+        min - height: 100 vh;
+        display: flex;
+        align - items: center;
+        justify - content: center;
+        padding: 48 px;
+    }
+    /* ======================================
+    Card
+    ====================================== */
+    .error - card {
+        position: relative;
+        overflow: hidden;
+        width: min(760 px, 100 % );
+        padding: 64 px;
+        text - align: center;
+        border - radius: 32 px;
+        border: 1 px solid
+        var (--border - color);
+        background: linear - gradient(
+            180 deg,
+            rgba(255, 255, 255, .04),
+            rgba(255, 255, 255, .02)
+        );
+        backdrop - filter: blur(24 px);
+        box - shadow: var (--shadow - xl);
+    }
+    /* ======================================
+    Glow
+    ====================================== */
+    .error - card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial - gradient(
+            circle at top,
+            rgba(59, 130, 246, .18),
+            transparent 55 %
+        );
+        pointer - events: none;
+    }
+    /* ======================================
+    Code
+    ====================================== */
+    .error - code {
+        font - size: 7 rem;
+        font - weight: 900;
+        line - height: 1;
+        letter - spacing: -.05 em;
+        background:
+            linear - gradient(
+                135 deg,
+                var (--color - primary),
+                var (--color - secondary)
+            ); -
+        webkit - background - clip: text; -
+        webkit - text - fill - color: transparent;
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .error - title {
+        margin - top: 24 px;
+        color: var (--text - primary);
+    }
+    .error - description {
+        max - width: 560 px;
+        margin: 18 px auto 0;
+        color: var (--text - secondary);
+        line - height: 1.9;
+    }
+    /* ======================================
+    Illustration
+    ====================================== */
+    .error - illustration {
+        width: 180 px;
+        height: 180 px;
+        margin: 40 px auto;
+    }
+    .error - illustration svg {
+        width: 100 % ;
+        height: 100 % ;
+    }
+    /* ======================================
+    Actions
+    ====================================== */
+    .error - actions {
+        display: flex;
+        justify - content: center;
+        flex - wrap: wrap;
+        gap: 18 px;
+        margin - top: 42 px;
+    }
+    /* ======================================
+    Links
+    ====================================== */
+    .error - links {
+        display: flex;
+        justify - content: center;
+        flex - wrap: wrap;
+        gap: 24 px;
+        margin - top: 32 px;
+    }
+    .error - links a {
+        color: var (--text - muted);
+        transition: color
+        var (--transition);
+    }
+    .error - links a: hover {
+        color: var (--color - primary);
+    }
+    /* ======================================
+    Animation
+    ====================================== */
+    .error - card {
+        animation: errorFloat
+        8 s
+        ease - in - out
+        infinite;
+    }
+@keyframes errorFloat {
+    0 % , 100 % {
+        transform: translateY(0);
+    }
+    50 % {
+        transform: translateY(-6 px);
+    }
+}
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .error - page {
+            padding: 24 px;
+        }
+        .error - card {
+            padding: 40 px 24 px;
+        }
+        .error - code {
+            font - size: 4.5 rem;
+        }
+        .error - actions {
+            flex - direction: column;
+        }
+        .error - actions.btn {
+            width: 100 % ;
+        }
+}

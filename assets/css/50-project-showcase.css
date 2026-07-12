@@ -1,0 +1,166 @@
+/*
+==========================================
+MJT Project Design System
+Project Showcase
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Showcase
+====================================== */
+.project - showcase {
+        display: grid;
+        grid - template - columns: 420 px
+        1 fr;
+        gap: 48 px;
+        align - items: start;
+    }
+    /* ======================================
+    Sidebar
+    ====================================== */
+    .project - sidebar {
+        position: sticky;
+        top: 110 px;
+        display: flex;
+        flex - direction: column;
+        gap: 24 px;
+    }
+    /* ======================================
+    Overview
+    ====================================== */
+    .project - overview {
+        padding: 28 px;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+    }
+    .project - overview - title {
+        margin - bottom: 18 px;
+        color: var (--text - primary);
+    }
+    .project - overview p {
+        color: var (--text - secondary);
+        line - height: 1.8;
+    }
+    /* ======================================
+    Quick Info
+    ====================================== */
+    .project - info {
+        display: flex;
+        flex - direction: column;
+        gap: 16 px;
+        margin - top: 28 px;
+    }
+    .project - info - item {
+        display: flex;
+        justify - content: space - between;
+        gap: 16 px;
+        padding - bottom: 14 px;
+        border - bottom: 1 px solid
+        var (--border - color);
+    }
+    .project - info - label {
+        color: var (--text - muted);
+    }
+    .project - info - value {
+        color: var (--text - primary);
+        font - weight: 600;
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .project - content {
+        display: flex;
+        flex - direction: column;
+        gap: 32 px;
+    }
+    /* ======================================
+    Section
+    ====================================== */
+    .project - section {
+        padding: 34 px;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+    }
+    .project - section - title {
+        margin - bottom: 18 px;
+        color: var (--text - primary);
+    }
+    .project - section p {
+        color: var (--text - secondary);
+        line - height: 1.9;
+    }
+    /* ======================================
+    Image Preview
+    ====================================== */
+    .project - preview {
+        overflow: hidden;
+        margin - top: 28 px;
+        border - radius: 18 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .03);
+    }
+    .project - preview img {
+        display: block;
+        width: 100 % ;
+        transition: transform .5 s ease;
+    }
+    .project - preview: hover img {
+        transform: scale(1.04);
+    }
+    /* ======================================
+    Feature List
+    ====================================== */
+    .project - feature - list {
+        display: grid;
+        grid - template - columns: repeat(2, 1 fr);
+        gap: 20 px;
+        margin - top: 28 px;
+    }
+    .project - feature {
+        display: flex;
+        gap: 14 px;
+        align - items: flex - start;
+    }
+    .project - feature - icon {
+        width: 42 px;
+        height: 42 px;
+        display: grid;
+        place - items: center;
+        border - radius: 12 px;
+        flex - shrink: 0;
+        background: rgba(59, 130, 246, .12);
+        color: var (--color - primary);
+    }
+    .project - feature h4 {
+        margin - bottom: 6 px;
+    }
+    .project - feature p {
+        font - size: .92 rem;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 1100 px) {
+    .project - showcase {
+            grid - template - columns: 1 fr;
+        }
+        .project - sidebar {
+            position: relative;
+            top: auto;
+        }
+}
+@media(max - width: 768 px) {
+    .project - feature - list {
+            grid - template - columns: 1 fr;
+        }
+        .project - section {
+            padding: 24 px;
+        }
+}

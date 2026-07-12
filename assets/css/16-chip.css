@@ -1,0 +1,164 @@
+/*
+==========================================
+MJT Project Design System
+Chips
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Base
+====================================== */
+.chip {
+    display: inline - flex;
+    align - items: center;
+    justify - content: center;
+    gap: 10 px;
+    height: 40 px;
+    padding: 0 16 px;
+    border - radius: 999 px;
+    border: 1 px solid
+    var (--border - color);
+    background: rgba(255, 255, 255, .04);
+    color: var (--text - secondary);
+    font - size: .88 rem;
+    font - weight: 500;
+    white - space: nowrap;
+    transition: background
+    var (--transition),
+    border - color
+    var (--transition),
+    color
+    var (--transition),
+    transform
+    var (--transition);
+}
+.chip: hover {
+        transform: translateY(-2 px);
+        border - color: var (--border - hover);
+        color: var (--text - primary);
+        background: rgba(255, 255, 255, .06);
+    }
+    /* ======================================
+    Active
+    ====================================== */
+    .chip.active {
+        color: #fff;
+        border - color: transparent;
+        background: linear - gradient(
+            135 deg,
+            var (--color - primary),
+            var (--color - secondary)
+        );
+        box - shadow: var (--shadow - glow);
+    }
+    /* ======================================
+    Outline
+    ====================================== */
+    .chip - outline {
+        background: transparent;
+    }
+    /* ======================================
+    Glass
+    ====================================== */
+    .chip - glass {
+        backdrop - filter:
+            blur(var (--blur - md));
+    }
+    /* ======================================
+    Soft
+    ====================================== */
+    .chip - soft {
+        background: rgba(59, 130, 246, .10);
+        color: #BFDBFE;
+        border - color: rgba(59, 130, 246, .20);
+    }
+    /* ======================================
+    Success
+    ====================================== */
+    .chip - success {
+        background: rgba(16, 185, 129, .12);
+        color: #A7F3D0;
+        border - color: rgba(16, 185, 129, .22);
+    }
+    /* ======================================
+    Warning
+    ====================================== */
+    .chip - warning {
+        background: rgba(245, 158, 11, .12);
+        color: #FCD34D;
+        border - color: rgba(245, 158, 11, .22);
+    }
+    /* ======================================
+    Danger
+    ====================================== */
+    .chip - danger {
+        background: rgba(239, 68, 68, .12);
+        color: #FECACA;
+        border - color: rgba(239, 68, 68, .22);
+    }
+    /* ======================================
+    Icon
+    ====================================== */
+    .chip - icon {
+        width: 18 px;
+        height: 18 px;
+        display: grid;
+        place - items: center;
+        flex - shrink: 0;
+    }
+    .chip - icon svg {
+        width: 100 % ;
+        height: 100 % ;
+    }
+    /* ======================================
+    Close
+    ====================================== */
+    .chip - close {
+        width: 20 px;
+        height: 20 px;
+        display: grid;
+        place - items: center;
+        border - radius: 50 % ;
+        cursor: pointer;
+        transition: background
+        var (--transition);
+    }
+    .chip - close: hover {
+        background: rgba(255, 255, 255, .08);
+    }
+    /* ======================================
+    Group
+    ====================================== */
+    .chip - group {
+        display: flex;
+        flex - wrap: wrap;
+        gap: 12 px;
+    }
+    /* ======================================
+    Filter
+    ====================================== */
+    .chip - filter {
+        cursor: pointer;
+        user - select: none;
+    }
+    /* ======================================
+    Size
+    ====================================== */
+    .chip - sm {
+        height: 34 px;
+        padding: 0 14 px;
+        font - size: .78 rem;
+    }
+    .chip - lg {
+        height: 46 px;
+        padding: 0 20 px;
+        font - size: .95 rem;
+    }
+    /* ======================================
+    Disabled
+    ====================================== */
+    .chip: disabled,
+    .chip.disabled {
+        opacity: .5;
+        pointer - events: none;
+    }

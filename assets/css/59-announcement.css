@@ -1,0 +1,151 @@
+/*
+==========================================
+MJT Project Design System
+Announcement Banner
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Container
+====================================== */
+.announcement {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align - items: center;
+    justify - content: space - between;
+    gap: 28 px;
+    padding: 18 px 28 px;
+    margin - bottom: 36 px;
+    border - radius: 20 px;
+    border: 1 px solid
+    var (--border - color);
+    background: linear - gradient(
+        135 deg,
+        rgba(59, 130, 246, .10),
+        rgba(34, 197, 94, .08),
+        rgba(255, 255, 255, .03)
+    );
+    backdrop - filter: blur(18 px);
+}
+/* ======================================
+Glow
+====================================== */
+.announcement::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer - events: none;
+        background: radial - gradient(
+            circle at left center,
+            rgba(59, 130, 246, .18),
+            transparent 45 %
+        );
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .announcement - content {
+        position: relative;
+        z - index: 2;
+        display: flex;
+        align - items: center;
+        gap: 18 px;
+    }
+    .announcement - icon {
+        width: 52 px;
+        height: 52 px;
+        display: grid;
+        place - items: center;
+        border - radius: 16 px;
+        flex - shrink: 0;
+        color: var (--color - primary);
+        background: rgba(59, 130, 246, .12);
+    }
+    .announcement - title {
+        margin - bottom: 4 px;
+        color: var (--text - primary);
+        font - weight: 700;
+    }
+    .announcement - description {
+        color: var (--text - secondary);
+        line - height: 1.7;
+    }
+    /* ======================================
+    Badge
+    ====================================== */
+    .announcement - badge {
+        display: inline - flex;
+        align - items: center;
+        padding: 6 px 12 px;
+        border - radius: 999 px;
+        background: linear - gradient(
+            135 deg,
+            var (--color - primary),
+            var (--color - secondary)
+        );
+        color: #fff;
+        font - size: .75 rem;
+        font - weight: 700;
+        text - transform: uppercase;
+        letter - spacing: .05 em;
+    }
+    /* ======================================
+    Actions
+    ====================================== */
+    .announcement - actions {
+        display: flex;
+        align - items: center;
+        gap: 14 px;
+        flex - shrink: 0;
+    }
+    /* ======================================
+    Dismiss
+    ====================================== */
+    .announcement - close {
+        width: 42 px;
+        height: 42 px;
+        display: grid;
+        place - items: center;
+        border - radius: 12 px;
+        color: var (--text - muted);
+        transition: all
+        var (--transition);
+    }
+    .announcement - close: hover {
+        color: #fff;
+        background: rgba(255, 255, 255, .08);
+    }
+    /* ======================================
+    Animation
+    ====================================== */
+    .announcement {
+        animation: announcementFloat
+        6 s
+        ease - in - out
+        infinite;
+    }
+@keyframes announcementFloat {
+    0 % , 100 % {
+        transform: translateY(0);
+    }
+    50 % {
+        transform: translateY(-2 px);
+    }
+}
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .announcement {
+        flex - direction: column;
+        align - items: flex - start;
+        padding: 22 px;
+    }
+    .announcement - actions {
+            width: 100 % ;
+        }
+        .announcement - actions.btn {
+            flex: 1;
+        }
+}

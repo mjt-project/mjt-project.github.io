@@ -1,0 +1,192 @@
+/*
+==========================================
+MJT Project Design System
+Buttons
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Base
+====================================== */
+.btn {
+    position: relative;
+    display: inline - flex;
+    align - items: center;
+    justify - content: center;
+    gap: 12 px;
+    padding: 14 px 28 px;
+    border: 1 px solid transparent;
+    border - radius: var (--radius - md);
+    font - size: .95 rem;
+    font - weight: 600;
+    line - height: 1;
+    cursor: pointer;
+    user - select: none;
+    overflow: hidden;
+    transition: transform
+    var (--transition),
+    background
+    var (--transition),
+    color
+    var (--transition),
+    border - color
+    var (--transition),
+    box - shadow
+    var (--transition);
+}
+/* ======================================
+Hover
+====================================== */
+.btn: hover {
+        transform: translateY(-2 px);
+    }
+    /* ======================================
+    Active
+    ====================================== */
+    .btn: active {
+        transform: translateY(0) scale(.98);
+    }
+    /* ======================================
+    Disabled
+    ====================================== */
+    .btn: disabled {
+        opacity: .55;
+        pointer - events: none;
+    }
+    /* ======================================
+    Primary
+    ====================================== */
+    .btn - primary {
+        color: #fff;
+        background: linear - gradient(
+            135 deg,
+            var (--color - primary),
+            var (--color - secondary)
+        );
+        box - shadow: var (--shadow - md);
+    }
+    .btn - primary: hover {
+        box - shadow:
+            var (--shadow - lg),
+            var (--shadow - glow);
+    }
+    /* ======================================
+    Secondary
+    ====================================== */
+    .btn - secondary {
+        color: var (--text - primary);
+        background: var (--bg - card);
+        border - color: var (--border - color);
+        backdrop - filter: blur(var (--blur - md));
+    }
+    .btn - secondary: hover {
+        border - color: var (--border - hover);
+        background: var (--bg - card - hover);
+    }
+    /* ======================================
+    Outline
+    ====================================== */
+    .btn - outline {
+        color: var (--color - primary);
+        border - color: var (--color - primary);
+        background: transparent;
+    }
+    .btn - outline: hover {
+        background: rgba(59, 130, 246, .12);
+    }
+    /* ======================================
+    Ghost
+    ====================================== */
+    .btn - ghost {
+        color: var (--text - secondary);
+        background: transparent;
+    }
+    .btn - ghost: hover {
+        background: rgba(255, 255, 255, .05);
+    }
+    /* ======================================
+    Danger
+    ====================================== */
+    .btn - danger {
+        color: #fff;
+        background: var (--color - danger);
+    }
+    .btn - danger: hover {
+        filter: brightness(1.08);
+    }
+    /* ======================================
+    Success
+    ====================================== */
+    .btn - success {
+        color: #fff;
+        background: var (--color - success);
+    }
+    .btn - success: hover {
+        filter: brightness(1.08);
+    }
+    /* ======================================
+    Sizes
+    ====================================== */
+    .btn - xs {
+        padding: 8 px 14 px;
+        font - size: .75 rem;
+    }
+    .btn - sm {
+        padding: 10 px 18 px;
+        font - size: .85 rem;
+    }
+    .btn - md {
+        padding: 14 px 28 px;
+    }
+    .btn - lg {
+        padding: 18 px 36 px;
+        font - size: 1 rem;
+    }
+    .btn - xl {
+        padding: 22 px 42 px;
+        font - size: 1.1 rem;
+    }
+    /* ======================================
+    Rounded
+    ====================================== */
+    .btn - pill {
+        border - radius: 999 px;
+    }
+    /* ======================================
+    Block
+    ====================================== */
+    .btn - block {
+        width: 100 % ;
+    }
+    /* ======================================
+    Icon
+    ====================================== */
+    .btn - icon {
+        width: 52 px;
+        height: 52 px;
+        padding: 0;
+    }
+    .btn - icon svg {
+        width: 22 px;
+        height: 22 px;
+    }
+    /* ======================================
+    Loading
+    ====================================== */
+    .btn - loading {
+        pointer - events: none;
+    }
+    .btn - loading::after {
+        content: "";
+        width: 16 px;
+        height: 16 px;
+        border - radius: 50 % ;
+        border: 2 px solid rgba(255, 255, 255, .35);
+        border - top - color: #fff;
+        animation: button - spin .8 s linear infinite;
+    }
+@keyframes button - spin {
+    to {
+        transform: rotate(360 deg);
+    }
+}

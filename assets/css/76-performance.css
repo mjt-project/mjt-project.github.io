@@ -1,0 +1,121 @@
+/*
+==========================================
+MJT Project Design System
+Performance Optimization
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+GPU Acceleration
+====================================== */
+.animate,
+.transition,
+.card,
+.modal,
+.dropdown,
+.navbar {
+    transform: translateZ(0);
+    backface - visibility: hidden;
+}
+/* ======================================
+Lazy Content
+====================================== */
+.lazy {
+    opacity: 0;
+    transform: translateY(20 px);
+    transition: opacity .5 s ease,
+    transform .5 s ease;
+}
+.lazy.loaded {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    /* ======================================
+    Content Visibility
+    ====================================== */
+    .performance - section {
+        content - visibility:
+            auto;
+        contain - intrinsic - size:
+            600 px;
+    }
+/* ======================================
+Image Optimization
+====================================== */
+img {
+    content - visibility:
+        auto;
+}
+.image - placeholder {
+    background: linear - gradient(
+        90 deg,
+        rgba(255, 255, 255, .05),
+        rgba(255, 255, 255, .1),
+        rgba(255, 255, 255, .05)
+    );
+    animation: imageLoading
+    1.5 s
+    infinite;
+}
+@keyframes imageLoading {
+    0 % {
+        background - position: -200 px 0;
+    }
+    100 % {
+        background - position: 200 px 0;
+    }
+}
+/* ======================================
+GPU Layers
+====================================== */
+.will - change - transform {
+        will - change:
+            transform;
+    }
+    .will - change - opacity {
+        will - change:
+            opacity;
+    }
+/* ======================================
+Smooth Scroll
+====================================== */
+html {
+    scroll - behavior:
+        smooth;
+}
+/* ======================================
+Optimize Hover
+====================================== */
+@media(hover: hover) {
+    .hover - lift {
+            transition: transform .25 s ease,
+            box - shadow .25 s ease;
+        }
+        .hover - lift: hover {
+            transform: translateY(-6 px);
+        }
+}
+/* ======================================
+Mobile Performance
+====================================== */
+@media(max - width: 768 px) {
+    *{
+        -webkit - tap - highlight - color: transparent;
+    }
+    .heavy - animation {
+        animation: none!important;
+    }
+}
+/* ======================================
+Reduced Motion Override
+====================================== */
+@media(prefers - reduced - motion: reduce) {
+    html {
+        scroll - behavior:
+            auto;
+    }
+    *{
+        animation - duration: .01 ms!important;
+        transition - duration: .01 ms!important;
+    }
+}

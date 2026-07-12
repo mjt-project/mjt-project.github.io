@@ -1,0 +1,175 @@
+/*
+==========================================
+MJT Project Design System
+Repository Grid
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Repository Grid
+====================================== */
+.repository - grid {
+        display: grid;
+        grid - template - columns: repeat(2, minmax(0, 1 fr));
+        gap: 28 px;
+        align - items: start;
+    }
+    /* ======================================
+    Compact Card
+    ====================================== */
+    .repository - card {
+        position: relative;
+        display: flex;
+        flex - direction: column;
+        gap: 18 px;
+        min - height: 100 % ;
+        padding: 24 px;
+        overflow: hidden;
+        border - radius: 22 px;
+        border: 1 px solid
+        var (--border - color);
+        background: linear - gradient(
+            180 deg,
+            rgba(255, 255, 255, .05),
+            rgba(255, 255, 255, .025)
+        );
+        backdrop - filter: blur(18 px);
+        transition: transform
+        var (--transition),
+        border - color
+        var (--transition),
+        box - shadow
+        var (--transition);
+    }
+    .repository - card: hover {
+        transform: translateY(-8 px);
+        border - color: var (--border - hover);
+        box - shadow: var (--shadow - lg);
+    }
+    /* ======================================
+    Glow
+    ====================================== */
+    .repository - card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        pointer - events: none;
+        transition: opacity .35 s;
+        background: radial - gradient(
+            circle at top right,
+            rgba(59, 130, 246, .18),
+            transparent 58 %
+        );
+    }
+    .repository - card: hover::before {
+        opacity: 1;
+    }
+    /* ======================================
+    Header
+    ====================================== */
+    .repository - card - header {
+        display: flex;
+        align - items: center;
+        gap: 16 px;
+    }
+    .repository - card - icon {
+        width: 54 px;
+        height: 54 px;
+        display: grid;
+        place - items: center;
+        flex - shrink: 0;
+        border - radius: 16 px;
+        background: rgba(59, 130, 246, .12);
+    }
+    .repository - card - icon svg {
+        width: 26 px;
+        height: 26 px;
+    }
+    /* ======================================
+    Body
+    ====================================== */
+    .repository - card - title {
+        margin: 0;
+        color: var (--text - primary);
+    }
+    .repository - card - title a {
+        color: inherit;
+    }
+    .repository - card - description {
+        color: var (--text - secondary);
+        line - height: 1.75;
+    }
+    /* ======================================
+    Topics
+    ====================================== */
+    .repository - card - topics {
+        display: flex;
+        flex - wrap: wrap;
+        gap: 8 px;
+    }
+    /* ======================================
+    Stats
+    ====================================== */
+    .repository - card - stats {
+        display: flex;
+        flex - wrap: wrap;
+        gap: 18 px;
+        margin - top: auto;
+        color: var (--text - muted);
+        font - size: .86 rem;
+    }
+    .repository - card - stats span {
+        display: flex;
+        align - items: center;
+        gap: 6 px;
+    }
+    /* ======================================
+    Footer
+    ====================================== */
+    .repository - card - footer {
+        display: flex;
+        justify - content: space - between;
+        align - items: center;
+        padding - top: 18 px;
+        border - top: 1 px solid
+        var (--border - color);
+    }
+    /* ======================================
+    Featured
+    ====================================== */
+    .repository - card.featured {
+        border - color:
+            rgba(59, 130, 246, .32);
+        background:
+            linear - gradient(
+                180 deg,
+                rgba(59, 130, 246, .10),
+                rgba(255, 255, 255, .03)
+            );
+    }
+    .repository - card.featured::after {
+        content: "Featured";
+        position: absolute;
+        top: 18 px;
+        right: 18 px;
+        padding: 6 px 12 px;
+        border - radius: 999 px;
+        background: linear - gradient(
+            135 deg,
+            var (--color - primary),
+            var (--color - secondary)
+        );
+        color: #fff;
+        font - size: .72 rem;
+        font - weight: 700;
+        letter - spacing: .04 em;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 1100 px) {
+    .repository - grid {
+        grid - template - columns: 1 fr;
+    }
+}

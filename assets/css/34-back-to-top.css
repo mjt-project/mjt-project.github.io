@@ -1,0 +1,114 @@
+/*
+==========================================
+MJT Project Design System
+Back To Top
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Button
+====================================== */
+.back - to - top {
+        position: fixed;
+        right: 32 px;
+        bottom: 32 px;
+        width: 58 px;
+        height: 58 px;
+        display: flex;
+        align - items: center;
+        justify - content: center;
+        border - radius: 50 % ;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(15, 23, 42, .82);
+        backdrop - filter: blur(18 px);
+        color: var (--text - primary);
+        box - shadow: var (--shadow - lg);
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20 px);
+        transition: opacity .25 s ease,
+        visibility .25 s ease,
+        transform .25 s ease,
+        background .25 s ease,
+        border - color .25 s ease;
+        z - index: 900;
+    }
+    /* ======================================
+    Visible
+    ====================================== */
+    .back - to - top.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    /* ======================================
+    Hover
+    ====================================== */
+    .back - to - top: hover {
+        background: linear - gradient(
+            135 deg,
+            var (--color - primary),
+            var (--color - secondary)
+        );
+        color: #fff;
+        border - color: transparent;
+        transform: translateY(-4 px);
+    }
+    /* ======================================
+    Active
+    ====================================== */
+    .back - to - top: active {
+        transform: scale(.94);
+    }
+    /* ======================================
+    Icon
+    ====================================== */
+    .back - to - top svg {
+        width: 22 px;
+        height: 22 px;
+    }
+    /* ======================================
+    Pulse
+    ====================================== */
+    .back - to - top::before {
+        content: "";
+        position: absolute;
+        inset: -6 px;
+        border - radius: 50 % ;
+        border: 1 px solid rgba(59, 130, 246, .35);
+        opacity: 0;
+    }
+    .back - to - top.visible::before {
+        animation: backToTopPulse
+        2.4 s
+        infinite;
+    }
+@keyframes backToTopPulse {
+    0 % {
+        opacity: .45;
+        transform: scale(1);
+    }
+    100 % {
+        opacity: 0;
+        transform: scale(1.4);
+    }
+}
+/* ======================================
+Light Theme
+====================================== */
+[data - theme = "light"].back - to - top {
+    background: rgba(255, 255, 255, .82);
+}
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .back - to - top {
+        right: 18 px;
+        bottom: 18 px;
+        width: 52 px;
+        height: 52 px;
+    }
+}

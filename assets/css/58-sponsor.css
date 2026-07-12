@@ -1,0 +1,149 @@
+/*
+==========================================
+MJT Project Design System
+Sponsor
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Section
+====================================== */
+.sponsors {
+    display: flex;
+    flex - direction: column;
+    gap: 40 px;
+}
+/* ======================================
+Grid
+====================================== */
+.sponsor - grid {
+        display: grid;
+        grid - template - columns: repeat(auto - fit, minmax(240 px, 1 fr));
+        gap: 24 px;
+    }
+    /* ======================================
+    Card
+    ====================================== */
+    .sponsor {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex - direction: column;
+        align - items: center;
+        text - align: center;
+        padding: 36 px 28 px;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+        transition: transform
+        var (--transition),
+        border - color
+        var (--transition),
+        box - shadow
+        var (--transition);
+    }
+    .sponsor: hover {
+        transform: translateY(-8 px);
+        border - color: var (--border - hover);
+        box - shadow: var (--shadow - lg);
+    }
+    /* ======================================
+    Glow
+    ====================================== */
+    .sponsor::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity .35 s;
+        background: radial - gradient(
+            circle at top,
+            rgba(59, 130, 246, .18),
+            transparent 60 %
+        );
+    }
+    .sponsor: hover::before {
+        opacity: 1;
+    }
+    /* ======================================
+    Logo
+    ====================================== */
+    .sponsor - logo {
+        width: 88 px;
+        height: 88 px;
+        display: grid;
+        place - items: center;
+        margin - bottom: 24 px;
+        border - radius: 22 px;
+        background: rgba(255, 255, 255, .05);
+    }
+    .sponsor - logo img {
+        width: 56 px;
+        height: 56 px;
+        object - fit: contain;
+    }
+    /* ======================================
+    Content
+    ====================================== */
+    .sponsor - name {
+        margin - bottom: 10 px;
+        color: var (--text - primary);
+    }
+    .sponsor - description {
+        color: var (--text - secondary);
+        line - height: 1.8;
+    }
+    /* ======================================
+    Tier
+    ====================================== */
+    .sponsor - tier {
+        display: inline - flex;
+        align - items: center;
+        margin - top: 22 px;
+        padding: 7 px 14 px;
+        border - radius: 999 px;
+        background: rgba(59, 130, 246, .10);
+        color: var (--color - primary);
+        font - size: .8 rem;
+        font - weight: 700;
+    }
+    /* ======================================
+    Button
+    ====================================== */
+    .sponsor - action {
+        margin - top: 28 px;
+    }
+    /* ======================================
+    Become Sponsor
+    ====================================== */
+    .sponsor - cta {
+        padding: 42 px;
+        border - radius: 28 px;
+        border: 2 px dashed
+        rgba(59, 130, 246, .28);
+        text - align: center;
+        background: rgba(59, 130, 246, .05);
+    }
+    .sponsor - cta h3 {
+        margin - bottom: 16 px;
+        color: var (--text - primary);
+    }
+    .sponsor - cta p {
+        max - width: 620 px;
+        margin: auto;
+        color: var (--text - secondary);
+        line - height: 1.9;
+    }
+    .sponsor - cta.btn {
+        margin - top: 30 px;
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .sponsor - cta {
+        padding: 30 px 22 px;
+    }
+}

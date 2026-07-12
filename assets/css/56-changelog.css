@@ -1,0 +1,135 @@
+/*
+==========================================
+MJT Project Design System
+Changelog
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Container
+====================================== */
+.changelog {
+    display: flex;
+    flex - direction: column;
+    gap: 28 px;
+}
+/* ======================================
+Version
+====================================== */
+.changelog - version {
+        position: relative;
+        overflow: hidden;
+        padding: 32 px;
+        border - radius: 24 px;
+        border: 1 px solid
+        var (--border - color);
+        background: rgba(255, 255, 255, .04);
+        backdrop - filter: blur(18 px);
+        transition: transform
+        var (--transition),
+        border - color
+        var (--transition),
+        box - shadow
+        var (--transition);
+    }
+    .changelog - version: hover {
+        transform: translateY(-6 px);
+        border - color: var (--border - hover);
+        box - shadow: var (--shadow - lg);
+    }
+    /* ======================================
+    Header
+    ====================================== */
+    .changelog - header {
+        display: flex;
+        justify - content: space - between;
+        align - items: center;
+        gap: 24 px;
+        margin - bottom: 24 px;
+    }
+    .changelog - title {
+        display: flex;
+        align - items: center;
+        gap: 14 px;
+    }
+    .changelog - title h3 {
+        margin: 0;
+        color: var (--text - primary);
+    }
+    .changelog - date {
+        color: var (--text - muted);
+        font - size: .9 rem;
+    }
+    /* ======================================
+    Badges
+    ====================================== */
+    .changelog - badges {
+        display: flex;
+        gap: 10 px;
+        flex - wrap: wrap;
+    }
+    .changelog - badge {
+        padding: 6 px 12 px;
+        border - radius: 999 px;
+        background: rgba(59, 130, 246, .10);
+        color: var (--color - primary);
+        font - size: .78 rem;
+        font - weight: 700;
+    }
+    /* ======================================
+    Lists
+    ====================================== */
+    .changelog - group {
+        margin - top: 24 px;
+    }
+    .changelog - group - title {
+        margin - bottom: 14 px;
+        color: var (--text - primary);
+    }
+    .changelog - list {
+        display: flex;
+        flex - direction: column;
+        gap: 14 px;
+    }
+    .changelog - item {
+        display: flex;
+        align - items: flex - start;
+        gap: 14 px;
+    }
+    .changelog - icon {
+        width: 20 px;
+        height: 20 px;
+        flex - shrink: 0;
+        color: var (--color - success);
+        margin - top: 2 px;
+    }
+    .changelog - text {
+        color: var (--text - secondary);
+        line - height: 1.8;
+    }
+    /* ======================================
+    Footer
+    ====================================== */
+    .changelog - footer {
+        display: flex;
+        justify - content: space - between;
+        align - items: center;
+        margin - top: 28 px;
+        padding - top: 20 px;
+        border - top: 1 px solid
+        var (--border - color);
+    }
+/* ======================================
+Responsive
+====================================== */
+@media(max - width: 768 px) {
+    .changelog - header {
+            flex - direction: column;
+            align - items: flex - start;
+        }
+        .changelog - footer {
+            flex - direction: column;
+            align - items: flex - start;
+            gap: 14 px;
+        }
+}

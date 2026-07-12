@@ -1,0 +1,226 @@
+/*
+==========================================
+MJT Project Design System
+Layout
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Container
+====================================== */
+.container {
+    width: min(
+        calc(100 % -48 px),
+        var (--container - width)
+    );
+    margin - inline: auto;
+}
+.container - sm {
+        width: min(
+            calc(100 % -48 px),
+            960 px
+        );
+        margin - inline: auto;
+    }
+    .container - xs {
+        width: min(
+            calc(100 % -48 px),
+            720 px
+        );
+        margin - inline: auto;
+    }
+    /* ======================================
+    Section
+    ====================================== */
+    .section {
+        position: relative;
+        padding - block: var (--space - 10);
+    }
+    .section - sm {
+        padding - block: var (--space - 8);
+    }
+    .section - lg {
+        padding - block: 160 px;
+    }
+    /* ======================================
+    Display
+    ====================================== */
+    .flex {
+        display: flex;
+    }
+    .inline - flex {
+        display: inline - flex;
+    }
+    .grid {
+        display: grid;
+    }
+    .block {
+        display: block;
+    }
+    .inline - block {
+        display: inline - block;
+    }
+    .hidden {
+        display: none;
+    }
+    /* ======================================
+    Flex
+    ====================================== */
+    .flex - column {
+        flex - direction: column;
+    }
+    .flex - wrap {
+        flex - wrap: wrap;
+    }
+    .items - start {
+        align - items: flex - start;
+    }
+    .items - center {
+        align - items: center;
+    }
+    .items - end {
+        align - items: flex - end;
+    }
+    .justify - start {
+        justify - content: flex - start;
+    }
+    .justify - center {
+        justify - content: center;
+    }
+    .justify - between {
+        justify - content: space - between;
+    }
+    .justify - end {
+        justify - content: flex - end;
+    }
+    .flex - 1 {
+        flex: 1;
+    }
+    /* ======================================
+    Grid
+    ====================================== */
+    .grid - 2 {
+        display: grid;
+        grid - template - columns: repeat(2, minmax(0, 1 fr));
+        gap: 32 px;
+    }
+    .grid - 3 {
+        display: grid;
+        grid - template - columns: repeat(3, minmax(0, 1 fr));
+        gap: 32 px;
+    }
+    .grid - 4 {
+        display: grid;
+        grid - template - columns: repeat(4, minmax(0, 1 fr));
+        gap: 32 px;
+    }
+    .grid - auto {
+        display: grid;
+        grid - template - columns: repeat(auto - fit, minmax(320 px, 1 fr));
+        gap: 32 px;
+    }
+    /* ======================================
+    Gap
+    ====================================== */
+    .gap - 1 {
+        gap: var (--space - 1);
+    }
+    .gap - 2 {
+        gap: var (--space - 2);
+    }
+    .gap - 3 {
+        gap: var (--space - 3);
+    }
+    .gap - 4 {
+        gap: var (--space - 4);
+    }
+    .gap - 5 {
+        gap: var (--space - 5);
+    }
+    .gap - 6 {
+        gap: var (--space - 6);
+    }
+    .gap - 7 {
+        gap: var (--space - 7);
+    }
+    .gap - 8 {
+        gap: var (--space - 8);
+    }
+    /* ======================================
+    Width
+    ====================================== */
+    .w - full {
+        width: 100 % ;
+    }
+    .w - auto {
+        width: auto;
+    }
+    .max - w {
+        max - width: 100 % ;
+    }
+    /* ======================================
+    Height
+    ====================================== */
+    .h - full {
+        height: 100 % ;
+    }
+    .min - screen {
+        min - height: 100 vh;
+    }
+    /* ======================================
+    Spacing
+    ====================================== */
+    .mt - auto {
+        margin - top: auto;
+    }
+    .mx - auto {
+        margin - inline: auto;
+    }
+    .my - auto {
+        margin - block: auto;
+    }
+    /* ======================================
+    Overflow
+    ====================================== */
+    .overflow - hidden {
+        overflow: hidden;
+    }
+    .overflow - auto {
+        overflow: auto;
+    }
+    /* ======================================
+    Position
+    ====================================== */
+    .relative {
+        position: relative;
+    }
+    .absolute {
+        position: absolute;
+    }
+    .fixed {
+        position: fixed;
+    }
+    .sticky {
+        position: sticky;
+    }
+    /* ======================================
+    Z-Index
+    ====================================== */
+    .z - 1 {
+        z - index: 1;
+    }
+    .z - 10 {
+        z - index: 10;
+    }
+    .z - 100 {
+        z - index: 100;
+    }
+    .z - navbar {
+        z - index: var (--z - navbar);
+    }
+    .z - modal {
+        z - index: var (--z - modal);
+    }
+    .z - toast {
+        z - index: var (--z - toast);
+    }

@@ -1,0 +1,183 @@
+/*
+==========================================
+MJT Project Design System
+Cards
+Version : 1.0.0
+==========================================
+*/
+/* ======================================
+Base Card
+====================================== */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20 px;
+    padding: 32 px;
+    overflow: hidden;
+    border: 1 px solid
+    var (--border - color);
+    border - radius: var (--radius - lg);
+    background: var (--bg - card);
+    backdrop - filter: blur(var (--blur - md));
+    transition: transform
+    var (--transition),
+    border - color
+    var (--transition),
+    background
+    var (--transition),
+    box - shadow
+    var (--transition);
+}
+/* ======================================
+Glow Layer
+====================================== */
+.card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity .35 s;
+        background: radial - gradient(
+            circle at top right,
+            rgba(59, 130, 246, .18),
+            transparent 45 %
+        ),
+        radial - gradient(
+            circle at bottom left,
+            rgba(34, 197, 94, .10),
+            transparent 40 %
+        );
+    }
+    /* ======================================
+    Border Animation
+    ====================================== */
+    .card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border - radius: inherit;
+        padding: 1 px;
+        background: linear - gradient(
+            135 deg,
+            rgba(59, 130, 246, .55),
+            rgba(34, 197, 94, .25),
+            transparent
+        ); -
+        webkit - mask: linear - gradient(#000 0 0) content-box,
+        linear-gradient(# 000 0 0); -
+        webkit - mask - composite: xor;
+        mask - composite: exclude;
+        opacity: 0;
+        transition: opacity .35 s;
+    }
+    /* ======================================
+    Hover
+    ====================================== */
+    .card: hover {
+        transform: translateY(-8 px);
+        background: var (--bg - card - hover);
+        border - color: var (--border - hover);
+        box - shadow: var (--shadow - lg);
+    }
+    .card: hover::before {
+        opacity: 1;
+    }
+    .card: hover::after {
+        opacity: 1;
+    }
+    /* ======================================
+    Active
+    ====================================== */
+    .card: active {
+        transform: translateY(-2 px);
+    }
+    /* ======================================
+    Featured
+    ====================================== */
+    .card - featured {
+        background: linear - gradient(
+            180 deg,
+            rgba(59, 130, 246, .08),
+            rgba(255, 255, 255, .04)
+        );
+    }
+    /* ======================================
+    Project Card
+    ====================================== */
+    .project - card {
+        min - height: 320 px;
+    }
+    .project - card.project - title {
+        display: flex;
+        align - items: center;
+        justify - content: space - between;
+        gap: 16 px;
+    }
+    .project - card h3 {
+        font - size: 1.75 rem;
+    }
+    .project - card p {
+        color: var (--text - secondary);
+    }
+    .project - card.project - footer {
+        display: flex;
+        align - items: center;
+        justify - content: space - between;
+        gap: 16 px;
+        margin - top: auto;
+    }
+    /* ======================================
+    Card Tags
+    ====================================== */
+    .card - tags {
+        display: flex;
+        flex - wrap: wrap;
+        gap: 10 px;
+    }
+    /* ======================================
+    Card Image
+    ====================================== */
+    .card - image {
+        width: 72 px;
+        height: 72 px;
+        display: grid;
+        place - items: center;
+        border - radius: 20 px;
+        background: rgba(255, 255, 255, .05);
+    }
+    /* ======================================
+    Card Icon
+    ====================================== */
+    .card - image svg {
+        width: 38 px;
+        height: 38 px;
+    }
+    /* ======================================
+    Card Stats
+    ====================================== */
+    .card - stats {
+        display: flex;
+        flex - wrap: wrap;
+        gap: 18 px;
+    }
+    .card - stat {
+        display: flex;
+        align - items: center;
+        gap: 8 px;
+        color: var (--text - muted);
+        font - size: .92 rem;
+    }
+    /* ======================================
+    Glass Card
+    ====================================== */
+    .glass - card {
+        background: rgba(255, 255, 255, .03);
+        backdrop - filter: blur(20 px);
+    }
+    /* ======================================
+    Interactive
+    ====================================== */
+    .card - clickable {
+        cursor: pointer;
+    }
